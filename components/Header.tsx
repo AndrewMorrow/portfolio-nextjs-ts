@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Example() {
   return (
     <div className="relative ">
-      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto py-20 px-4 sm:py-24 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
           Andrew Morrow
         </h1>
