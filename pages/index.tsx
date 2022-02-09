@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Navbar2 from "../components/Navbar";
+import ProjectItem from "../components/ProjectItem";
 import Projects from "../components/Projects";
 import ScrollAction from "../components/ScrollAction";
 
