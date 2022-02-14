@@ -30,7 +30,7 @@ export default function Example() {
                 <div className="flex-shrink-0 flex items-center">
                   <Image
                     className="hidden lg:block h-8 w-auto"
-                    src="/android-chrome-512x512.png"
+                    src="/images/android-chrome-512x512.png"
                     alt="Workflow"
                     width={45}
                     height={45}
