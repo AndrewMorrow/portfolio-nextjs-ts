@@ -10,6 +10,8 @@ import {
   SiJavascript,
   SiTailwindcss,
 } from "react-icons/si";
+import Icon from "../Partials/Icon";
+import DynamicIcon from "../Partials/Icon";
 
 // interface Props {
 //   project: {
@@ -31,17 +33,17 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
   const classNames = (...classes: any[]) => {
     return classes.filter(Boolean).join(" ");
   };
-  const formatJsx = (stringElem: any) => {
-    console.log(stringElem);
-    const FormattedElem = stringElem.replaceAll('"', "");
-    console.log(FormattedElem);
-    return FormattedElem;
-  };
+  // const formatJsx = (stringElem: any) => {
+  //   console.log(stringElem);
+  //   const FormattedElem = stringElem.replaceAll('"', "");
+  //   console.log(FormattedElem);
+  //   return FormattedElem;
+  // };
 
   return (
     <div
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-20 px-2 rounded-lg",
+        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-16 px-6 rounded-lg",
         flipped ? "bg-teal-300" : "bg-orange-300"
       )}
     >
@@ -86,7 +88,7 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
           </a>
         </div>
 
-        <p className="pr-2 mb-5">
+        <p className="pr-2 mb-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae
           provident deserunt magnam eligendi eos reprehenderit ipsam
           voluptatibus et quisquam inventore porro tempore, cumque magni, in
@@ -102,12 +104,16 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
         </h3>
         <div className="flex justify-center gap-4">
           {icons.map((icon: any, i: number) => (
-            <a key={i} className="has-tooltip relative cursor-pointer">
+            <a
+              key={i}
+              className="has-tooltip relative cursor-pointer self-center"
+            >
               {" "}
               <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
                 {icon.tip}
               </span>
-              {formatJsx(icon.icon)}
+              {/* {icon.icon} */}
+              <DynamicIcon icon={icon.name} size={icon.size} />
             </a>
           ))}
           {/* <SiJavascript size={30} />

@@ -6,12 +6,20 @@
     "imgSrc": "/images/merrimentquestCollage.png",
     "altText": "Screenshot of Merriment Quest website with tablet, phone, and desktop views",
     "icons": [
-      { "icon": "<SiJavascript size={30} />", "tip": "Javascript" },
-      { "icon": "<SiExpress size={30} />", "tip": "ExpressJS" },
-      { "icon": "<SiHandlebarsdotjs size={30} />", "tip": "Handlebars" },
       {
-        "icon": "<Image src='/images/expressjs.svg' alt='expressJS icon' width={50} height={20} />",
-        "tip": "expressJS"
+        "tip": "Javascript",
+        "name": "SiJavascript",
+        "size": 25
+      },
+      {
+        "tip": "ExpressJS",
+        "name": "SiExpress",
+        "size": 30
+      },
+      {
+        "tip": "Handlebars",
+        "name": "SiHandlebarsdotjs",
+        "size": 30
       }
     ]
   },
@@ -22,9 +30,24 @@
     "imgSrc": "/images/merrimentquestCollage.png",
     "altText": "Screenshot of Merriment Quest website with tablet, phone, and desktop views",
     "icons": [
-      { "icon": "<SiJavascript size={30} />", "tip": "Javascript" },
-      { "icon": "<SiExpress size={30} />", "tip": "ExpressJS" },
-      { "icon": "<SiHandlebarsdotjs size={30} />", "tip": "Handlebars" }
+      {
+        "icon": "<SiJavascript size={30} />",
+        "tip": "Javascript",
+        "name": "SiHandlebarsdotjs",
+        "size": 30
+      },
+      {
+        "icon": "<SiExpress size={30} />",
+        "tip": "ExpressJS",
+        "name": "SiHandlebarsdotjs",
+        "size": 30
+      },
+      {
+        "icon": "<SiHandlebarsdotjs size={30} />",
+        "tip": "Handlebars",
+        "name": "SiHandlebarsdotjs",
+        "size": 30
+      }
     ]
   }
 ]
