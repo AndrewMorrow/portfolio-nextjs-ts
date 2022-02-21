@@ -62,30 +62,32 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
           "sm:w-1/2 px-3 "
         )}
       >
-        <div className="flex gap-5">
-          <h2 className="text-3xl mb-2  ">{name}</h2>
-          <a
-            href={githubRepo}
-            target="_blank"
-            rel="noreferrer"
-            className="has-tooltip relative cursor-pointer"
-          >
-            <FaGithub size={30} />
-            <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4 -top-1 -translate-y-full w-max">
-              Github Repo
-            </span>
-          </a>
-          <a
-            href={deployedLink}
-            target="_blank"
-            rel="noreferrer"
-            className="has-tooltip relative cursor-pointer"
-          >
-            <FaRocket size={30} />
-            <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -top-1 -translate-y-full w-max">
-              See Live Demo
-            </span>
-          </a>
+        <div >
+          <h2 className="text-3xl mb-3">{name}</h2>
+          <div className="flex mb-3">
+            <a
+              href={githubRepo}
+              target="_blank"
+              rel="noreferrer"
+              className="has-tooltip relative cursor-pointer mr-5"
+            >
+              <FaGithub size={30} />
+              <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4 -top-1 -translate-y-full w-max">
+                Github Repo
+              </span>
+            </a>
+            <a
+              href={deployedLink}
+              target="_blank"
+              rel="noreferrer"
+              className="has-tooltip relative cursor-pointer "
+            >
+              <FaRocket size={30} />
+              <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4 -top-1 -translate-y-full w-max">
+                See Live Demo
+              </span>
+            </a>
+          </div>
         </div>
 
         <p className="pr-2 mb-6">
@@ -102,11 +104,11 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
         <h3 className="font-semibold text-lg text-center mb-2">
           Project Technologies
         </h3>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center ">
           {icons.map((icon: any, i: number) => (
             <a
               key={i}
-              className="has-tooltip relative cursor-pointer self-center"
+              className="has-tooltip relative cursor-pointer self-center mr-4"
             >
               {" "}
               <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
