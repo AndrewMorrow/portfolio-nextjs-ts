@@ -10,7 +10,7 @@ import {
 export default function AboutMe() {
   return (
     <>
-      <div className="flex  py-20 md:py-24">
+      <div id="aboutMe" className="flex  py-20 md:py-24">
         <div className="w-1/2">
           <h2 className="font-bold text-xl mb-2">About Me</h2>
           <p className="mb-5">

@@ -43,8 +43,8 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
   return (
     <div
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-16 px-6 rounded-lg",
-        flipped ? "bg-teal-300" : "bg-orange-300"
+        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-16 px-6 rounded-lg shadow-lg drop-shadow-lg",
+        flipped ? "bg-gray-100" : "bg-slate-100"
       )}
     >
       <div
@@ -62,7 +62,7 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
           "sm:w-1/2 px-3 "
         )}
       >
-        <div >
+        <div>
           <h2 className="text-3xl mb-3">{name}</h2>
           <div className="flex mb-3">
             <a
