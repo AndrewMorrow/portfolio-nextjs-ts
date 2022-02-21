@@ -43,18 +43,38 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
   return (
     <div
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-16 px-6 rounded-lg shadow-lg drop-shadow-lg xl:mr-6",
+        "sm:flex gap-4 lg:gap-0 mb-8 py-6 sm:py-8 px-2 rounded-lg shadow-lg drop-shadow-lg xl:mr-6",
         flipped ? "bg-gray-100" : "bg-slate-100"
       )}
     >
       <div
         className={classNames(
           flipped ? "order-2" : "order-1",
-          "sm:w-1/2 text-center mb-3 px-3"
+          "sm:w-1/2 text-center mb-3 px-3 md:self-center lg:self-baseline"
         )}
       >
         {/* <ProjectImages /> */}
         <Image src={imgSrc} alt={altText} width={500} height={300} />
+        <div className="hidden md:block">
+          <h3 className="font-semibold text-lg text-center mb-2 mt-3">
+            Project Technologies
+          </h3>
+          <div className="flex justify-center ">
+            {icons.map((icon: any, i: number) => (
+              <a
+                key={i}
+                className="has-tooltip relative cursor-pointer self-center mr-4"
+              >
+                {" "}
+                <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
+                  {icon.tip}
+                </span>
+                {/* {icon.icon} */}
+                <DynamicIcon icon={icon.name} size={icon.size} />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
       <div
         className={classNames(
@@ -101,27 +121,25 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
           <FaGithub size={30} />
           <FaRocket size={30} />
         </div> */}
-        <h3 className="font-semibold text-lg text-center mb-2">
-          Project Technologies
-        </h3>
-        <div className="flex justify-center ">
-          {icons.map((icon: any, i: number) => (
-            <a
-              key={i}
-              className="has-tooltip relative cursor-pointer self-center mr-4"
-            >
-              {" "}
-              <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
-                {icon.tip}
-              </span>
-              {/* {icon.icon} */}
-              <DynamicIcon icon={icon.name} size={icon.size} />
-            </a>
-          ))}
-          {/* <SiJavascript size={30} />
-          <SiExpress size={30} />
-          <SiHandlebarsdotjs size={30} />
-          <SiTailwindcss size={30} /> */}
+        <div className="block sm:hidden">
+          <h3 className="font-semibold text-lg text-center mb-2">
+            Project Technologies
+          </h3>
+          <div className="flex justify-center ">
+            {icons.map((icon: any, i: number) => (
+              <a
+                key={i}
+                className="has-tooltip relative cursor-pointer self-center mr-4"
+              >
+                {" "}
+                <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
+                  {icon.tip}
+                </span>
+                {/* {icon.icon} */}
+                <DynamicIcon icon={icon.name} size={icon.size} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>
