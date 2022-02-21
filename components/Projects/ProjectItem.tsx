@@ -43,7 +43,7 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
   return (
     <div
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-16 px-6 rounded-lg shadow-lg drop-shadow-lg",
+        "sm:flex gap-4 lg:gap-0 mb-8 py-16 sm:py-16 px-6 rounded-lg shadow-lg drop-shadow-lg xl:mr-6",
         flipped ? "bg-gray-100" : "bg-slate-100"
       )}
     >

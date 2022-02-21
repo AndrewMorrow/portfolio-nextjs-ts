@@ -24,7 +24,7 @@ export default function Navbar() {
 
   useScrollPosition(({ prevPos, currPos }) => {
     // console.log("y", currPos.y);
-    if (-currPos.y >= 0 && -currPos.y <= 600) {
+    if (-currPos.y >= 0 && -currPos.y <= 850) {
       handleActiveChange("aboutMe", true);
     } else if (-currPos.y >= 850) {
       handleActiveChange("projects", true);
