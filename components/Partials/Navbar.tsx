@@ -1,14 +1,15 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 function classNames(...classes: (string | boolean)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
   const initialState = {
     aboutMe: false,
     projects: false,
@@ -20,6 +21,32 @@ export default function Example() {
   const handleActiveChange = (item: string, isActive: boolean) => {
     setActiveItem({ ...initialState, [item]: isActive });
   };
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    // console.log("y", currPos.y);
+    if (-currPos.y >= 300 && -currPos.y <= 600) {
+      handleActiveChange("aboutMe", true);
+    } else if (-currPos.y >= 850) {
+      handleActiveChange("projects", true);
+    } else {
+      handleActiveChange("aboutMe", false);
+    }
+  });
+
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const handleScroll = () => {
+  //     const position = window.pageYOffset;
+  //     setScrollPosition(position);
+  //     console.log(scrollPosition);
+  // };
+
+  // useEffect(() => {
+  //     window.addEventListener('scroll', handleScroll, { passive: true });
+
+  //     return () => {
+  //         window.removeEventListener('scroll', handleScroll);
+  //     };
+  // }, []);
 
   return (
     <Disclosure as="nav" className="bg-white shadow sticky top-0 z-50">
