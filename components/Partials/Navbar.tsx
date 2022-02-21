@@ -9,7 +9,20 @@ function classNames(...classes: (string | boolean)[]) {
 }
 
 export default function Example() {
-  const [active, setActive] = useState(false);
+  const initialState = {
+    aboutMe: false,
+    projects: false,
+    contact: false,
+    bookMe: false,
+  };
+  const [activeItem, setActiveItem] = useState(initialState);
+
+  const handleActiveChange = (item: string, isActive: boolean) => {
+    setActiveItem({ ...activeItem, aboutMe: false });
+    console.log("false set", activeItem);
+    setActiveItem({ ...activeItem, [item]: isActive });
+    console.log("after set", activeItem);
+  };
 
   return (
     <Disclosure as="nav" className="bg-white shadow sticky top-0 z-50">
@@ -44,8 +57,9 @@ export default function Example() {
                     href="#aboutMe"
                     className={classNames(
                       " border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
-                      active && "text-gray-900 border-indigo-500"
+                      activeItem.aboutMe && "text-gray-900 border-indigo-500"
                     )}
+                    onClick={() => handleActiveChange("aboutMe", true)}
                   >
                     About Me
                   </a>
