@@ -13,15 +13,12 @@ export default function Example() {
     aboutMe: false,
     projects: false,
     contact: false,
-    bookMe: false,
+    bookInterview: false,
   };
   const [activeItem, setActiveItem] = useState(initialState);
 
   const handleActiveChange = (item: string, isActive: boolean) => {
-    setActiveItem({ ...activeItem, aboutMe: false });
-    console.log("false set", activeItem);
-    setActiveItem({ ...activeItem, [item]: isActive });
-    console.log("after set", activeItem);
+    setActiveItem({ ...initialState, [item]: isActive });
   };
 
   return (
@@ -56,8 +53,10 @@ export default function Example() {
                   <a
                     href="#aboutMe"
                     className={classNames(
-                      " border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
-                      activeItem.aboutMe && "text-gray-900 border-indigo-500"
+                      "  text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      activeItem.aboutMe
+                        ? "text-gray-900 border-indigo-500"
+                        : "border-transparent"
                     )}
                     onClick={() => handleActiveChange("aboutMe", true)}
                   >
@@ -65,13 +64,25 @@ export default function Example() {
                   </a>
                   <a
                     href="#contact"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    className={classNames(
+                      "text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      activeItem.contact
+                        ? "text-gray-900 border-indigo-500"
+                        : "border-transparent"
+                    )}
+                    onClick={() => handleActiveChange("contact", true)}
                   >
                     Contact
                   </a>
                   <a
                     href="#projects"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    className={classNames(
+                      "text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      activeItem.projects
+                        ? "text-gray-900 border-indigo-500"
+                        : "border-transparent"
+                    )}
+                    onClick={() => handleActiveChange("projects", true)}
                   >
                     Projects
                   </a>
@@ -79,7 +90,13 @@ export default function Example() {
                     href="https://calendly.com/andrewmorrow"
                     target="_blank"
                     rel="noreferrer"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    className={classNames(
+                      "text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      activeItem.bookInterview
+                        ? "text-gray-900 border-indigo-500"
+                        : "border-transparent"
+                    )}
+                    onClick={() => handleActiveChange("bookInterview", true)}
                   >
                     Book an Interview
                   </a>
