@@ -39,7 +39,7 @@ export default function ProjectItem(props: any): JSX.Element {
         )}
       >
         <Image src={imgSrc} alt={altText} width={500} height={300} />
-        <div className="hidden md:block">
+        <div className="hidden sm:block lg:hidden xl:block">
           <h3 className="font-semibold text-lg text-center mb-2 mt-3">
             Project Technologies
           </h3>
@@ -100,7 +100,7 @@ export default function ProjectItem(props: any): JSX.Element {
           velit quam maxime odit.
         </p>
 
-        <div className="block sm:hidden">
+        <div className="block sm:hidden lg:block xl:hidden">
           <h3 className="font-semibold text-lg text-center mb-2">
             Project Technologies
           </h3>
