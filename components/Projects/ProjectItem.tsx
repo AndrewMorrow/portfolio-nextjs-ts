@@ -30,6 +30,7 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
     project: { name, icons, githubRepo, deployedLink, imgSrc, altText },
     flipped,
   } = props;
+
   const classNames = (...classes: any[]) => {
     return classes.filter(Boolean).join(" ");
   };
@@ -43,7 +44,7 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
   return (
     <div
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-8 py-6 sm:py-8 px-2 rounded-lg shadow-lg drop-shadow-lg xl:mr-6",
+        "sm:flex gap-4 lg:gap-0 mb-8 py-6 sm:py-8 px-2 rounded-lg shadow-lg drop-shadow-lg ",
         flipped ? "bg-gray-100" : "bg-slate-100"
       )}
     >
