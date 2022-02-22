@@ -10,8 +10,8 @@ import {
   SiJavascript,
   SiTailwindcss,
 } from "react-icons/si";
-import Icon from "../Partials/Icon";
-import DynamicIcon from "../Partials/Icon";
+import Icon from "../Icon";
+import DynamicIcon from "../Icon";
 
 // interface Props {
 //   project: {
@@ -79,7 +79,7 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
       </div>
       <div
         className={classNames(
-          flipped ? "order-1 pl-3" : "order-2 ",
+          flipped ? "order-1 pl-3 xl:order-2" : "order-2 xl:order-1",
           "sm:w-1/2 px-3 "
         )}
       >

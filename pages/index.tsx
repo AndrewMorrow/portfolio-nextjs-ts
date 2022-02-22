@@ -1,9 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutMe from "../components/AboutMe";
-import Header from "../components/Partials/Header";
-import Navbar from "../components/Partials/Navbar";
-import Navbar2 from "../components/Partials/Navbar";
+import BookInterview from "../components/BookInterview";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Navbar2 from "../components/Navbar";
 import ProjectItem from "../components/Projects/ProjectItem";
 import Projects from "../components/Projects/Projects";
 import ScrollAction from "../components/ScrollAction";
@@ -24,6 +27,9 @@ const Home: NextPage = () => {
         <div id="projects">
           <Projects />
         </div>
+        {/* <BookInterview /> */}
+        {/* <Contact /> */}
+        <Footer />
       </div>
     </div>
   );

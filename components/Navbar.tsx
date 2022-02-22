@@ -13,8 +13,8 @@ export default function Navbar() {
   const initialState = {
     aboutMe: false,
     projects: false,
+    // bookInterview: false,
     contact: false,
-    bookInterview: false,
   };
   const [activeItem, setActiveItem] = useState(initialState);
 
@@ -23,12 +23,15 @@ export default function Navbar() {
   };
 
   useScrollPosition(({ prevPos, currPos }) => {
-    // console.log("y", currPos.y);
+    console.log("y", currPos.y);
     if (-currPos.y >= 0 && -currPos.y <= 850) {
       handleActiveChange("aboutMe", true);
-    } else if (-currPos.y >= 850) {
+    } else if (-currPos.y >= 850 && -currPos.y <= 1150) {
       handleActiveChange("projects", true);
-    } else {
+    } else if (-currPos.y >= 1150) {
+      handleActiveChange("contact", true);
+    }
+    else {
       handleActiveChange("aboutMe", false);
     }
   });
@@ -89,18 +92,7 @@ export default function Navbar() {
                   >
                     About Me
                   </a>
-                  <a
-                    href="#contact"
-                    className={classNames(
-                      "text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
-                      activeItem.contact
-                        ? "text-gray-900 border-indigo-500"
-                        : "border-transparent"
-                    )}
-                    onClick={() => handleActiveChange("contact", true)}
-                  >
-                    Contact
-                  </a>
+
                   <a
                     href="#projects"
                     className={classNames(
@@ -114,18 +106,28 @@ export default function Navbar() {
                     Projects
                   </a>
                   <a
-                    href="https://calendly.com/andrewmorrow"
-                    target="_blank"
-                    rel="noreferrer"
+                    href="#contact"
                     className={classNames(
                       "text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
-                      activeItem.bookInterview
+                      activeItem.contact
                         ? "text-gray-900 border-indigo-500"
                         : "border-transparent"
                     )}
+                    onClick={() => handleActiveChange("contact", true)}
+                  >
+                    Contact
+                  </a>
+
+                  <a
+                    href="https://calendly.com/andrewmorrow"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 rounded-md bg-blue-400 h-10 self-center"
                     onClick={() => handleActiveChange("bookInterview", true)}
                   >
-                    Book an Interview
+                    <button className="">
+                      Book an Interview
+                    </button>
                   </a>
                 </div>
               </div>
@@ -134,7 +136,7 @@ export default function Navbar() {
 
           {/* mobile nav */}
           <Disclosure.Panel className="sm:hidden">
-            <div className="pt-2 pb-4 space-y-1">
+            <div className="pt-2 pb-4 space-y-2">
               {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
               <Disclosure.Button
                 as="a"
@@ -153,14 +155,14 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium "
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                href="https://calendly.com/andrewmorrow"
+                className="pl-3 pr-4 p-2 rounded-md bg-blue-400 h-10 self-center ml-3 inline-block"
               >
                 Book an Interview
               </Disclosure.Button>
