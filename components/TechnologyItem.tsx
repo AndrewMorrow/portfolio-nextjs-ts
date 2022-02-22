@@ -15,8 +15,7 @@ export default function TechnologyItem(props: any) {
       >
         {isShown && <BsFillArrowRightCircleFill size={30} className="mr-2" />}
         <span className="self-center font-semibold flex">
-          <p className="mr-2">{props.name}</p>
-
+          <p className="mr-2 self-center">{props.name}</p>
           <DynamicIcon size={30} icon={props.icon} />
         </span>{" "}
       </a>

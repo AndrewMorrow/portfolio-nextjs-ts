@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { GiMailbox } from "react-icons/gi";
 
 export default function Contact() {
   return (
@@ -6,15 +7,18 @@ export default function Contact() {
       <h2 className=" text-2xl font-bold self-center mb-2 underline">
         Contact Information
       </h2>
-      <ul className="self-center">
-        <li className="mb-2">
-          <span className="font-medium">Email:</span>{" "}
-          <a href="mailto: beardedmongo@gmail.com" className="text-blue-500">
-            beardedmongo@gmail.com
-          </a>
-        </li>
-        <h3 className="text-center font-medium mb-2 underline">Social</h3>
-        <div className="flex justify-evenly">
+
+      <div className="mb-2 flex justify-center">
+        <span className="font-medium mr-2 flex">
+          <GiMailbox size={20} />:
+        </span>
+        <a href="mailto: beardedmongo@gmail.com" className="text-blue-500">
+          beardedmongo@gmail.com
+        </a>
+      </div>
+      <h3 className="text-center font-medium mb-2 underline">Social</h3>
+      <div className="flex justify-center">
+        <ul className="self-center flex gap-6">
           <li>
             <a
               href="https://github.com/AndrewMorrow"
@@ -42,8 +46,8 @@ export default function Contact() {
               <FaTwitter size={30} />
             </a>
           </li>
-        </div>
-      </ul>
+        </ul>
+      </div>
     </div>
   );
 }

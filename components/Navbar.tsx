@@ -31,9 +31,6 @@ export default function Navbar() {
     } else if (-currPos.y >= 1150) {
       handleActiveChange("contact", true);
     }
-    else {
-      handleActiveChange("aboutMe", false);
-    }
   });
 
   // const [scrollPosition, setScrollPosition] = useState(0);
@@ -125,9 +122,7 @@ export default function Navbar() {
                     className="p-2 rounded-md bg-blue-400 h-10 self-center"
                     onClick={() => handleActiveChange("bookInterview", true)}
                   >
-                    <button className="">
-                      Book an Interview
-                    </button>
+                    <button className="">Book an Interview</button>
                   </a>
                 </div>
               </div>

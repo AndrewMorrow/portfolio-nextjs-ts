@@ -104,20 +104,20 @@ export default function ProjectItem(props: any): JSX.Element {
           <h3 className="font-semibold text-lg text-center mb-2">
             Project Technologies
           </h3>
-          <div className="flex justify-center ">
+
+          <ul className="flex justify-center gap-4">
             {icons.map((icon: any, i: number) => (
-              <a
-                key={i}
-                className="has-tooltip relative cursor-pointer self-center mr-4"
-              >
-                {" "}
+              <li key={i} className="relative has-tooltip">
+                <a href={icon.href} className=" cursor-pointer self-center ">
+                  {" "}
+                  <DynamicIcon icon={icon.name} size={icon.size} />
+                </a>
                 <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
                   {icon.tip}
                 </span>
-                <DynamicIcon icon={icon.name} size={icon.size} />
-              </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
