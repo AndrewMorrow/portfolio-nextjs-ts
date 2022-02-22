@@ -6,13 +6,30 @@ import {
   SiMysql,
   SiTypescript,
 } from "react-icons/si";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import TechnologyItem from "./TechnologyItem";
+import { useState } from "react";
+
+const technologies = [
+  { id: 1, name: "HTML", icon: "FaHtml5" },
+  { id: 2, name: "CSS", icon: "FaCss3Alt" },
+  { id: 2, name: "JavaScript", icon: "SiJavascript" },
+  { id: 2, name: "NodeJS", icon: "FaNodeJs" },
+  { id: 2, name: "ReactJS", icon: "FaReact" },
+  { id: 2, name: "MySQL", icon: "SiMysql" },
+  { id: 2, name: "MongoDB", icon: "SiMongodb" },
+  { id: 2, name: "TypeScript", icon: "SiTypescript" },
+  { id: 2, name: "GraphQL", icon: "SiGraphql" },
+];
 
 export default function AboutMe() {
+  const [isShown, setIsShown] = useState(false);
+
   return (
-    <main id="aboutMe" className="flex  py-20 md:py-24">
-      <section className="w-1/2">
+    <main id="aboutMe" className="flex py-20 md:py-24 gap-6">
+      <section className="w-2/3 sm:pr-20 lg:pr-32">
         <h2 className="font-bold text-xl mb-2">About Me</h2>
-        <p className="mb-5">
+        <p className="mb-5 ">
           I currently work with JavaScript, jQuery, Bootstrap and React on a
           daily basis. I enjoy expanding my knowledge through learning and
           teaching different techologies. Outside of coding I also have a
@@ -37,123 +54,17 @@ export default function AboutMe() {
           </p>
         </div>
       </section>
-      <section className="flex flex-col w-1/2 pl-10 pr-3">
+      <section className="flex flex-col ">
         <h3 className="text-xl font-bold mb-3 ">Technology Proficiencies</h3>
-        <ul className="flex flex-col ">
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2">HTML</span>{" "}
-              <FaHtml5 size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-12 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2"> CSS </span>
-              <FaCss3Alt size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-10 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2">
-                {" "}
-                JavaScript{" "}
-              </span>
-              <SiJavascript size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-16 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2"> NodeJS </span>
-              <FaNodeJs size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-14 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2"> ReactJS </span>
-              <FaReact size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-14 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2"> MySQL </span>
-              <SiMysql size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-14 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2"> MongoDB </span>
-              <SiMongodb size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-14 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2">
-                {" "}
-                TypeScript{" "}
-              </span>
-              <SiTypescript size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-16 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
-          <li className="flex  mb-3">
-            <a
-              href="www.google.com"
-              className="flex cursor-pointer has-tooltip relative"
-            >
-              <span className="self-center font-semibold mr-2"> GraphQL </span>
-              <SiGraphql size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 translate-x-14 min-w-max">
-                Click to learn more
-              </span>
-            </a>
-          </li>
+        <ul className="flex flex-col">
+          {technologies.map((technology) => (
+            <TechnologyItem
+              key={technology.id}
+              name={technology.name}
+              icon={technology.icon}
+            />
+          ))}
+          
         </ul>
       </section>
     </main>
