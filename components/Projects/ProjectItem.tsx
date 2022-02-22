@@ -1,17 +1,7 @@
-import { url } from "inspector";
 import Image from "next/image";
 import React from "react";
-import laptopImage from "../public/images/LaptopSmerrimentquest.png";
-import ProjectImages from "./ProjectImages";
 import { FaGithub, FaRocket } from "react-icons/fa";
-import {
-  SiExpress,
-  SiHandlebarsdotjs,
-  SiJavascript,
-  SiTailwindcss,
-} from "react-icons/si";
-import Icon from "../Icon";
-import DynamicIcon from "../Icon";
+import DynamicIcon from "../DynamicIcon";
 
 // interface Props {
 //   project: {
@@ -25,24 +15,18 @@ import DynamicIcon from "../Icon";
 //   flipped: number;
 // }
 
-export default function ProjectItem<Project>(props: any): JSX.Element {
+const classNames = (...classes: any[]) => {
+  return classes.filter(Boolean).join(" ");
+};
+
+export default function ProjectItem(props: any): JSX.Element {
   const {
     project: { name, icons, githubRepo, deployedLink, imgSrc, altText },
     flipped,
   } = props;
 
-  const classNames = (...classes: any[]) => {
-    return classes.filter(Boolean).join(" ");
-  };
-  // const formatJsx = (stringElem: any) => {
-  //   console.log(stringElem);
-  //   const FormattedElem = stringElem.replaceAll('"', "");
-  //   console.log(FormattedElem);
-  //   return FormattedElem;
-  // };
-
   return (
-    <div
+    <section
       className={classNames(
         "sm:flex gap-4 lg:gap-0 mb-8 py-6 sm:py-8 px-2 rounded-lg shadow-lg drop-shadow-lg ",
         flipped ? "bg-gray-100" : "bg-slate-100"
@@ -54,13 +38,12 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
           "sm:w-1/2 text-center mb-3 px-3 md:self-center lg:self-baseline"
         )}
       >
-        {/* <ProjectImages /> */}
         <Image src={imgSrc} alt={altText} width={500} height={300} />
         <div className="hidden md:block">
           <h3 className="font-semibold text-lg text-center mb-2 mt-3">
             Project Technologies
           </h3>
-          <div className="flex justify-center ">
+          <figure className="flex justify-center">
             {icons.map((icon: any, i: number) => (
               <a
                 key={i}
@@ -70,11 +53,10 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
                 <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
                   {icon.tip}
                 </span>
-                {/* {icon.icon} */}
                 <DynamicIcon icon={icon.name} size={icon.size} />
               </a>
             ))}
-          </div>
+          </figure>
         </div>
       </div>
       <div
@@ -118,10 +100,6 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
           velit quam maxime odit.
         </p>
 
-        {/* <div className="flex gap-7 justify-center  mb-4">
-          <FaGithub size={30} />
-          <FaRocket size={30} />
-        </div> */}
         <div className="block sm:hidden">
           <h3 className="font-semibold text-lg text-center mb-2">
             Project Technologies
@@ -136,13 +114,12 @@ export default function ProjectItem<Project>(props: any): JSX.Element {
                 <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
                   {icon.tip}
                 </span>
-                {/* {icon.icon} */}
                 <DynamicIcon icon={icon.name} size={icon.size} />
               </a>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

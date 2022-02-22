@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <div id="contact" className="flex flex-col mb-6">
+    <div id="contact" className="flex flex-col mb-3">
       <h2 className=" text-2xl font-bold self-center mb-2 underline">
         Contact Information
       </h2>

@@ -1,9 +1,12 @@
 import Contact from "./Contact";
 
-export default function Footer(){
-  return(
-    <div>
+export default function Footer() {
+  return (
+    <footer className="mb-4">
       <Contact />
-    </div>
-  )
+      <p className="text-center">
+       <small>&#169;</small>  Andrew Morrow {new Date().getFullYear()}
+      </p>
+    </footer>
+  );
 }
