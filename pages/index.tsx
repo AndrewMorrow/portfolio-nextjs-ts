@@ -14,7 +14,7 @@ import ScrollAction from "../components/ScrollAction";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="min-h-screen bg-gradient-to-tr from-slate-500 via-stone-400 to-blue-200">
       <Head>
         <title>Andrew Morrow | Web Developer</title>
         <meta name="description" content="Andrew Morrow Portfolio" />

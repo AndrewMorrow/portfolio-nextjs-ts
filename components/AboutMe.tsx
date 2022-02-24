@@ -56,7 +56,7 @@ export default function AboutMe() {
       </section>
       <section className="flex flex-col ">
         <h3 className="text-xl font-bold mb-3 ">Technology Proficiencies</h3>
-        <ul className="flex flex-col">
+        <ul className="flex flex-col bg-gray-500 bg-opacity-5 ">
           {technologies.map((technology) => (
             <TechnologyItem
               key={technology.id}
