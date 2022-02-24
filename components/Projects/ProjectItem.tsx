@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import DynamicIcon from "../DynamicIcon";
 
@@ -24,25 +24,29 @@ export default function ProjectItem(props: any): JSX.Element {
     project: { name, icons, githubRepo, deployedLink, imgSrc, altText },
     flipped,
   } = props;
+  const [iconInfoIsActive, setIconInfoIsActive] = useState(false);
+
+  const handleIconInfo = (
+    isActive: boolean | ((prevState: boolean) => boolean)
+  ) => {
+    setIconInfoIsActive(isActive);
+  };
 
   return (
     <section
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-8 py-6 sm:py-8 px-2 rounded-lg shadow-lg drop-shadow-lg ",
-        flipped ? "bg-gray-100" : "bg-slate-100"
+        "sm:flex gap-4 lg:gap-0 mb-12 py-12 sm:py-16 px-2 "
+        // flipped ? "bg-gray-100" : "bg-slate-100"
       )}
     >
       <div
         className={classNames(
           flipped ? "order-2" : "order-1",
-          "sm:w-1/2 text-center mb-3 px-3 md:self-center lg:self-baseline"
+          "sm:w-1/2 text-center mb-3 px-3 pt-2"
         )}
       >
         <Image src={imgSrc} alt={altText} width={500} height={300} />
-        <div className="hidden sm:block lg:hidden xl:block">
-          <h3 className="font-semibold text-lg text-center mb-2 mt-3">
-            Project Technologies
-          </h3>
+        <div className="hidden sm:block lg:hidden mt-6">
           <figure className="flex justify-center">
             {icons.map((icon: any, i: number) => (
               <a
@@ -61,7 +65,7 @@ export default function ProjectItem(props: any): JSX.Element {
       </div>
       <div
         className={classNames(
-          flipped ? "order-1 pl-3 xl:order-2" : "order-2 xl:order-1",
+          flipped ? "order-1 pl-3 " : "order-2 ",
           "sm:w-1/2 px-3 "
         )}
       >
@@ -93,21 +97,31 @@ export default function ProjectItem(props: any): JSX.Element {
           </div>
         </div>
 
-        <p className="pr-2 mb-6">
+        <p className="pr-2 lg:mb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae
           provident deserunt magnam eligendi eos reprehenderit ipsam
           voluptatibus et quisquam inventore porro tempore, cumque magni, in
           velit quam maxime odit.
         </p>
 
-        <div className="block sm:hidden lg:block xl:hidden">
-          <h3 className="font-semibold text-lg text-center mb-2">
-            Project Technologies
-          </h3>
+        <div className="block sm:hidden lg:block">
+          <p
+            className={classNames(
+              "font-semibold text-lg text-center animate-bounce ",
+              !iconInfoIsActive && "invisible"
+            )}
+          >
+            Click to learn more!
+          </p>
 
-          <ul className="flex justify-center gap-4">
+          <ul className="flex justify-center gap-4 w-full">
             {icons.map((icon: any, i: number) => (
-              <li key={i} className="relative has-tooltip">
+              <li
+                key={i}
+                className="relative has-tooltip"
+                onMouseEnter={() => handleIconInfo(true)}
+                onMouseLeave={() => handleIconInfo(false)}
+              >
                 <a href={icon.href} className=" cursor-pointer self-center ">
                   {" "}
                   <DynamicIcon icon={icon.name} size={icon.size} />

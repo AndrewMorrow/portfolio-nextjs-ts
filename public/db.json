@@ -9,19 +9,19 @@
       {
         "tip": "Javascript",
         "name": "SiJavascript",
-        "size": 25,
+        "size": 40,
         "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       },
       {
         "tip": "ExpressJS",
         "name": "SiExpress",
-        "size": 30,
+        "size": 40,
         "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       },
       {
         "tip": "Handlebars",
         "name": "SiHandlebarsdotjs",
-        "size": 30,
+        "size": 40,
         "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       }
     ]

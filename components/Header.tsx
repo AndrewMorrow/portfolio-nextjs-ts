@@ -3,7 +3,8 @@ import Image from "next/image";
 /* This example requires Tailwind CSS v2.0+ */
 export default function Example() {
   return (
-    <header className="max-w-7xl mx-auto py-20 sm:py-24 ">
+    <header className="max-w-7xl mx-auto py-20 sm:py-24 " >
+     
       <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
         Andrew Morrow
       </h1>
