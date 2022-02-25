@@ -54,9 +54,9 @@ export default function AboutMe() {
           </p>
         </div>
       </section>
-      <section className="flex flex-col ">
+      <section className="flex flex-col">
         <h3 className="text-xl font-bold mb-3 ">Technology Proficiencies</h3>
-        <ul className="flex flex-col bg-gray-500 bg-opacity-5 ">
+        <ul className="flex flex-col">
           {technologies.map((technology) => (
             <TechnologyItem
               key={technology.id}
@@ -64,8 +64,8 @@ export default function AboutMe() {
               icon={technology.icon}
             />
           ))}
-          
         </ul>
+        <div className=" "></div>
       </section>
     </main>
   );

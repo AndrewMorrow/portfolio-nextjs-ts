@@ -12,7 +12,7 @@ export default function Contact() {
         <span className="font-medium mr-2 flex">
           <GiMailbox size={20} />:
         </span>
-        <a href="mailto: beardedmongo@gmail.com" className="text-blue-500">
+        <a href="mailto: beardedmongo@gmail.com" className="text-blue-400">
           beardedmongo@gmail.com
         </a>
       </div>
@@ -25,7 +25,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <FaGithub size={30} />
+              <FaGithub size={30} className="text-gray-900"/>
             </a>
           </li>
           <li>
@@ -34,7 +34,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <FaLinkedin size={30} />
+              <FaLinkedin size={30} className="text-blue-600"/>
             </a>
           </li>
           <li>
@@ -43,7 +43,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <FaTwitter size={30} />
+              <FaTwitter size={30} className="text-blue-500"/>
             </a>
           </li>
         </ul>
