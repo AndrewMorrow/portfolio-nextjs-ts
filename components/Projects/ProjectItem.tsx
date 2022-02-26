@@ -85,10 +85,6 @@ export default function ProjectItem(props: any): JSX.Element {
               <i className="hidden self-center md:block">
                 <FaGithub size={30} color="white" />
               </i>
-              <span className="tooltip left-1/2 -top-1 w-max -translate-x-2/4 -translate-y-[125%] rounded-md p-1">
-                Github Repo
-                <div className="absolute left-1/2 h-0 w-0 -translate-y-1/4 -translate-x-1/2  -rotate-[45deg] border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
-              </span>
             </a>
             <a
               href={deployedLink}
@@ -100,10 +96,6 @@ export default function ProjectItem(props: any): JSX.Element {
               <i className="hidden self-center md:block">
                 <FaRocket size={30} color="white" />
               </i>
-              <span className="tooltip  -top-1 w-max translate-x-2/4 translate-y-[10%] rounded-md p-1">
-                See Live Demo
-                <div className="absolute left-0 h-0 w-0  -translate-x-[45%] -translate-y-[120%] rotate-45 border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
-              </span>
             </a>
           </div>
         </div>

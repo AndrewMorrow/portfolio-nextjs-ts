@@ -1,17 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutMe from "../components/AboutMe";
-import AboutMe2 from "../components/AboutMe2";
-import BookInterview from "../components/BookInterview";
-import Contact from "../components/Contact";
+import AboutCardSection from "../components/AboutMe2";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Navbar2 from "../components/Navbar";
-import ProjectImages from "../components/Projects/ProjectImages";
-import ProjectItem from "../components/Projects/ProjectItem";
 import Projects from "../components/Projects/Projects";
-import ScrollAction from "../components/ScrollAction";
 
 const Home: NextPage = () => {
   return (
@@ -26,13 +21,10 @@ const Home: NextPage = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Header />
         <AboutMe />
-        <AboutMe2 />
-        {/* <ScrollAction /> */}
+        <AboutCardSection />
         <div id="projects">
           <Projects />
         </div>
-        {/* <BookInterview /> */}
-        {/* <Contact /> */}
       </div>
       <Footer />
     </div>
