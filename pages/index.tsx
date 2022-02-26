@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Navbar2 from "../components/Navbar";
 import Projects from "../components/Projects/Projects";
+import Technologies from "../components/Technologies";
 
 const Home: NextPage = () => {
   return (
@@ -20,7 +21,8 @@ const Home: NextPage = () => {
       {/* <div className="bg-[url('/images/wave-haikei.svg')] aspect-[960/540] w-100% bg-no-repeat bg-center bg-cover"></div> */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Header />
-        <AboutMe />
+        {/* <AboutMe /> */}
+        <Technologies />
         <AboutCardSection />
         <div id="projects">
           <Projects />
