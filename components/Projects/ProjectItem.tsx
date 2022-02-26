@@ -35,26 +35,29 @@ export default function ProjectItem(props: any): JSX.Element {
   return (
     <section
       className={classNames(
-        "sm:flex gap-4 lg:gap-0 mb-12 py-12 sm:py-16 px-2 "
-        // flipped ? "bg-gray-100" : "bg-slate-100"
+        "mb-12 gap-4 rounded-lg py-12 px-2 sm:flex sm:py-16 lg:gap-0"
+        // flipped
+        //   ? "bg-gray-800 p-2 bg-opacity-60 backdrop-blur-xl rounded-lg"
+        //   : "bg-gray-700 p-2 bg-opacity-40 backdrop-blur-xl  rounded-lg"
       )}
     >
       <div
         className={classNames(
           flipped ? "order-2" : "order-1",
-          "sm:w-1/2 text-center mb-3 px-3 pt-2"
+          "mb-3 pt-2 text-center sm:w-1/2 sm:px-3"
         )}
       >
         <Image src={imgSrc} alt={altText} width={500} height={300} />
-        <div className="hidden sm:block lg:hidden mt-6">
-          <figure className="flex justify-center">
+        <div className="mt-6 hidden sm:block lg:hidden">
+          <figure className="flex justify-center gap-4">
             {icons.map((icon: any, i: number) => (
               <a
                 key={i}
-                className="has-tooltip relative cursor-pointer self-center mr-4"
+                className="has-tooltip relative cursor-pointer self-center "
               >
                 {" "}
-                <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
+                <span className="tooltip left-1/2 -bottom-1 -translate-x-2/4 translate-y-[125%]  rounded-md p-1">
+                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
                   {icon.tip}
                 </span>
                 <DynamicIcon icon={icon.name} size={icon.size} />
@@ -66,38 +69,46 @@ export default function ProjectItem(props: any): JSX.Element {
       <div
         className={classNames(
           flipped ? "order-1 pl-3 " : "order-2 ",
-          "sm:w-1/2 px-3 "
+          "px-3 sm:w-1/2 "
         )}
       >
         <div>
-          <h2 className="text-3xl mb-3">{name}</h2>
-          <div className="flex mb-3">
+          <h2 className="mb-3 text-3xl text-white">{name}</h2>
+          <div className="mb-3 flex">
             <a
               href={githubRepo}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip relative cursor-pointer mr-5"
+              className="has-tooltip  relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-500 p-2"
             >
-              <FaGithub size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4 -top-1 -translate-y-full w-max">
+              <p className="self-center ">Github Repo</p>
+              <i className="hidden self-center md:block">
+                <FaGithub size={30} color="white" />
+              </i>
+              <span className="tooltip left-1/2 -top-1 w-max -translate-x-2/4 -translate-y-[125%] rounded-md p-1">
                 Github Repo
+                <div className="absolute left-1/2 h-0 w-0 -translate-y-1/4 -translate-x-1/2  -rotate-[45deg] border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
               </span>
             </a>
             <a
               href={deployedLink}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip relative cursor-pointer "
+              className="has-tooltip relative flex cursor-pointer content-center  gap-2 rounded-lg bg-blue-600 p-2"
             >
-              <FaRocket size={30} />
-              <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4 -top-1 -translate-y-full w-max">
+              <p className="self-center">See Live Demo</p>
+              <i className="hidden self-center md:block">
+                <FaRocket size={30} color="white" />
+              </i>
+              <span className="tooltip  -top-1 w-max translate-x-2/4 translate-y-[10%] rounded-md p-1">
                 See Live Demo
+                <div className="absolute left-0 h-0 w-0  -translate-x-[45%] -translate-y-[120%] rotate-45 border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
               </span>
             </a>
           </div>
         </div>
 
-        <p className="pr-2 lg:mb-4">
+        <p className="pr-2 text-white lg:mb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae
           provident deserunt magnam eligendi eos reprehenderit ipsam
           voluptatibus et quisquam inventore porro tempore, cumque magni, in
@@ -107,18 +118,18 @@ export default function ProjectItem(props: any): JSX.Element {
         <div className="block sm:hidden lg:block">
           <p
             className={classNames(
-              "font-semibold text-lg text-center animate-bounce ",
+              "animate-bounce text-center text-lg font-semibold ",
               !iconInfoIsActive && "invisible"
             )}
           >
             Click to learn more!
           </p>
 
-          <ul className="flex justify-center gap-4 w-full">
+          <ul className="flex w-full justify-center gap-4">
             {icons.map((icon: any, i: number) => (
               <li
                 key={i}
-                className="relative has-tooltip"
+                className="has-tooltip relative"
                 onMouseEnter={() => handleIconInfo(true)}
                 onMouseLeave={() => handleIconInfo(false)}
               >
@@ -126,7 +137,8 @@ export default function ProjectItem(props: any): JSX.Element {
                   {" "}
                   <DynamicIcon icon={icon.name} size={icon.size} />
                 </a>
-                <span className="tooltip p-1 rounded-md left-1/2 -translate-x-2/4  -bottom-1 translate-y-full">
+                <span className="tooltip left-1/2 -bottom-1 -translate-x-2/4 translate-y-[125%]  rounded-md p-1">
+                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
                   {icon.tip}
                 </span>
               </li>

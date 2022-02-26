@@ -49,14 +49,17 @@ export default function Navbar() {
   // }, []);
 
   return (
-    <Disclosure as="nav" className="bg-blue-200 bg-opacity-50 backdrop-blur-lg shadow sticky top-0 z-50">
+    <Disclosure
+      as="nav"
+      className="sticky top-0 z-50 bg-slate-800 bg-opacity-60 backdrop-blur-2xl "
+    >
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex justify-between h-16">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -65,10 +68,10 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-center">
                   <Image
-                    className="hidden lg:block h-8 w-auto"
+                    className="hidden h-8 w-auto lg:block"
                     src="/images/android-chrome-512x512.png"
                     alt="Workflow"
                     width={45}
@@ -80,10 +83,10 @@ export default function Navbar() {
                   <a
                     href="#aboutMe"
                     className={classNames(
-                      "   hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      "   inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-300",
                       activeItem.aboutMe
-                        ? "text-gray-900 border-blue-500"
-                        : "text-gray-700 border-transparent"
+                        ? "border-blue-500 font-bold text-white"
+                        : "border-transparent text-gray-400"
                     )}
                     onClick={() => handleActiveChange("aboutMe", true)}
                   >
@@ -93,10 +96,10 @@ export default function Navbar() {
                   <a
                     href="#projects"
                     className={classNames(
-                      " hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      " inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-300",
                       activeItem.projects
-                        ? "text-gray-900 border-indigo-500"
-                        : "text-gray-700 border-transparent"
+                        ? "border-blue-500 font-bold text-white"
+                        : "border-transparent text-gray-400"
                     )}
                     onClick={() => handleActiveChange("projects", true)}
                   >
@@ -105,10 +108,10 @@ export default function Navbar() {
                   <a
                     href="#contact"
                     className={classNames(
-                      " hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                      " inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-300",
                       activeItem.contact
-                        ? "text-gray-900 border-indigo-500"
-                        : "text-gray-700 border-transparent"
+                        ? "border-blue-500 font-bold text-white"
+                        : "border-transparent text-gray-400"
                     )}
                     onClick={() => handleActiveChange("contact", true)}
                   >
@@ -119,7 +122,7 @@ export default function Navbar() {
                     href="https://calendly.com/andrewmorrow"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 rounded-md bg-blue-400 h-10 self-center"
+                    className="h-10 self-center rounded-md bg-teal-500 p-2"
                     onClick={() => handleActiveChange("bookInterview", true)}
                   >
                     <button className="">Book an Interview</button>
@@ -131,33 +134,33 @@ export default function Navbar() {
 
           {/* mobile nav */}
           <Disclosure.Panel className="sm:hidden">
-            <div className="pt-2 pb-4 space-y-2">
+            <div className="space-y-2 pt-2 pb-4">
               {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
               >
                 About Me
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 Contact
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium "
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 "
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="https://calendly.com/andrewmorrow"
-                className="pl-3 pr-4 p-2 rounded-md bg-blue-400 h-10 self-center ml-3 inline-block"
+                className="ml-3 inline-block h-10 self-center rounded-md bg-blue-400 p-2 pl-3 pr-4"
               >
                 Book an Interview
               </Disclosure.Button>

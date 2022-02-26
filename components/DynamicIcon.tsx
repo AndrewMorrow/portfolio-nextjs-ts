@@ -10,34 +10,13 @@ import {
 } from "react-icons/si";
 import React from "react";
 import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
-// const obj2 = {
-//   icon: "<Image src='/images/expressjs.svg' alt='expressJS icon' width={50} height={20} />",
-//   tip: "expressJS",
-// };
-// const arr = [
-//   {
-//     icon: <SiJavascript size={30} />,
-//     tip: "Javascript",
-//     name: "SiHandlebarsdotjs",
-//   },
-//   {
-//     icon: <SiExpress size={30} />,
-//     tip: "ExpressJS",
-//     name: "SiHandlebarsdotjs",
-//   },
-//   {
-//     icon: <SiHandlebarsdotjs size={30} />,
-//     tip: "Handlebars",
-//     name: "SiHandlebarsdotjs",
-//   },
-// ];
 
 export default function DynamicIcon(props: any) {
   const { icon, size } = props;
 
   switch (icon) {
     case "SiJavascript":
-      return <SiJavascript size={size} color="yellow" />;
+      return <SiJavascript size={size} className="text-yellow-400" />;
     case "SiHandlebarsdotjs":
       return <SiHandlebarsdotjs size={size} />;
     case "SiExpress":
@@ -45,21 +24,21 @@ export default function DynamicIcon(props: any) {
     case "SiTailwindCSS":
       return <SiTailwindcss size={size} />;
     case "FaHtml5":
-      return <FaHtml5 size={size} color="blue" />;
+      return <FaHtml5 size={size} className="text-blue-700" />;
     case "FaCss3Alt":
-      return <FaCss3Alt size={size} color="Red" />;
+      return <FaCss3Alt size={size} className="text-red-700" />;
     case "FaNodeJs":
-      return <FaNodeJs size={size} color="green"/>;
+      return <FaNodeJs size={size} color="green" />;
     case "FaReact":
-      return <FaReact size={size} className="text-sky-400"/>;
+      return <FaReact size={size} className="text-sky-400" />;
     case "SiMysql":
-      return <SiMysql size={size} className="text-sky-800"/>;
+      return <SiMysql size={size} className="text-sky-800" />;
     case "SiMongodb":
-      return <SiMongodb size={size} color="green"/>;
+      return <SiMongodb size={size} color="green" />;
     case "SiTypescript":
-      return <SiTypescript size={size} className="text-blue-500"/>;
+      return <SiTypescript size={size} className="text-blue-600" />;
     case "SiGraphql":
-      return <SiGraphql size={size} className="text-pink-400"/>;
+      return <SiGraphql size={size} className="text-pink-500" />;
     default:
       return <span>no icon</span>;
   }
