@@ -13,7 +13,6 @@ export default function Navbar() {
   const initialState = {
     aboutMe: false,
     projects: false,
-    // bookInterview: false,
     contact: false,
   };
   const [activeItem, setActiveItem] = useState(initialState);
@@ -119,13 +118,12 @@ export default function Navbar() {
                   </a>
 
                   <a
-                    href="https://calendly.com/andrewmorrow"
+                    href="/documents/Andrew_Morrow_Resume_2022.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="h-10 self-center rounded-md bg-teal-500 p-2"
-                    onClick={() => handleActiveChange("bookInterview", true)}
+                    className=" self-center rounded-md bg-blue-600 p-2 transition-all hover:animate-pulse hover:bg-blue-500"
                   >
-                    <button className="">Book an Interview</button>
+                    <button className="">View Resume</button>
                   </a>
                 </div>
               </div>
@@ -138,31 +136,49 @@ export default function Navbar() {
               {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
               <Disclosure.Button
                 as="a"
-                href="#"
-                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
+                href="#aboutMe"
+                className={classNames(
+                  "block border-l-4 py-2 pl-3 pr-4 text-base font-medium  hover:border-gray-300 hover:bg-gray-50",
+                  activeItem.aboutMe
+                    ? "border-blue-600 bg-gray-200 font-bold text-black"
+                    : "border-transparent text-gray-400"
+                )}
+                onClick={() => handleActiveChange("aboutMe", true)}
               >
                 About Me
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                Contact
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 "
+                href="#projects"
+                className={classNames(
+                  "block border-l-4 py-2 pl-3 pr-4 text-base font-medium  hover:border-gray-300 hover:bg-gray-50",
+                  activeItem.projects
+                    ? "border-blue-600 bg-gray-200 font-bold text-black"
+                    : "border-transparent text-gray-400"
+                )}
+                onClick={() => handleActiveChange("projects", true)}
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                href="https://calendly.com/andrewmorrow"
-                className="ml-3 inline-block h-10 self-center rounded-md bg-blue-400 p-2 pl-3 pr-4"
+                href="#contact"
+                className={classNames(
+                  "block border-l-4 py-2 pl-3 pr-4 text-base font-medium  hover:border-gray-300 hover:bg-gray-50",
+                  activeItem.contact
+                    ? "border-blue-600 bg-gray-200 font-bold text-black"
+                    : "border-transparent text-gray-400"
+                )}
+                onClick={() => handleActiveChange("contact", true)}
               >
-                Book an Interview
+                Contact
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="/documents/Andrew_Morrow_Resume_2022.pdf"
+                className="ml-3 inline-block h-10 self-center rounded-md bg-blue-600 p-2 pl-3 pr-4"
+              >
+                View Resume
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

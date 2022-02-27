@@ -10,12 +10,12 @@ export default function TechnologyItem(props: any) {
 
   return (
     <li className="mb-3 flex ">
-      {isShown && (
+      {/* {isShown && (
         <BsFillArrowRightCircleFill
           size={30}
           className="mr-2 hidden text-blue-600 transition duration-300 ease-in-out sm:block"
         />
-      )}
+      )} */}
       <span
         className={classNames(
           "rounded-lg bg-slate-700 bg-opacity-40 p-2 backdrop-blur-xl"

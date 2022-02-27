@@ -10,6 +10,9 @@ import {
 } from "react-icons/si";
 import React from "react";
 import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import { IoAccessibility } from "react-icons/io5";
+import { RiShieldStarFill } from "react-icons/ri";
+import { GiBookCover } from "react-icons/gi";
 
 export default function DynamicIcon(props: any) {
   const { icon, size } = props;
@@ -39,6 +42,12 @@ export default function DynamicIcon(props: any) {
       return <SiTypescript size={size} className="text-blue-600" />;
     case "SiGraphql":
       return <SiGraphql size={size} className="text-pink-500" />;
+    case "IoAccessibility":
+      return <IoAccessibility size={size} />;
+    case "RiShieldStarFill":
+      return <RiShieldStarFill size={size} />;
+    case "GiBookCover":
+      return <GiBookCover size={size} />;
     default:
       return <span>no icon</span>;
   }

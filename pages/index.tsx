@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutMe from "../components/AboutMe";
-import AboutCardSection from "../components/AboutMe2";
+import AboutCardSection from "../components/AboutCardSection";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";

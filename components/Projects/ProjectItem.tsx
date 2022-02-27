@@ -35,7 +35,7 @@ export default function ProjectItem(props: any): JSX.Element {
   return (
     <section
       className={classNames(
-        "mb-12 gap-4 rounded-lg py-12 px-2 sm:flex sm:py-16 lg:gap-0"
+        "mb-12 gap-4 rounded-lg py-12  sm:flex sm:py-16 lg:gap-0"
         // flipped
         //   ? "bg-gray-800 p-2 bg-opacity-60 backdrop-blur-xl rounded-lg"
         //   : "bg-gray-700 p-2 bg-opacity-40 backdrop-blur-xl  rounded-lg"
@@ -72,14 +72,14 @@ export default function ProjectItem(props: any): JSX.Element {
           "px-3 sm:w-1/2 "
         )}
       >
-        <div>
-          <h2 className="mb-3 text-3xl text-white">{name}</h2>
-          <div className="mb-3 flex">
+        <div className="">
+          <h2 className="mb-3 text-3xl text-white text-center ">{name}</h2>
+          <div className="mb-3 flex justify-center ">
             <a
               href={githubRepo}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip  relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-500 p-2"
+              className="has-tooltip  relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-600 p-2"
             >
               <p className="self-center ">Github Repo</p>
               <i className="hidden self-center md:block">
@@ -100,7 +100,7 @@ export default function ProjectItem(props: any): JSX.Element {
           </div>
         </div>
 
-        <p className="pr-2 text-white lg:mb-4">
+        <p className="px-8 py-2 text-white lg:mb-4 text-center ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae
           provident deserunt magnam eligendi eos reprehenderit ipsam
           voluptatibus et quisquam inventore porro tempore, cumque magni, in
@@ -117,7 +117,7 @@ export default function ProjectItem(props: any): JSX.Element {
             Click to learn more!
           </p>
 
-          <ul className="flex w-full justify-center gap-4">
+          <ul className="flex w-full justify-center  gap-4">
             {icons.map((icon: any, i: number) => (
               <li
                 key={i}

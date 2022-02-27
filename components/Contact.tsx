@@ -1,5 +1,7 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegFilePdf, FaTwitter } from "react-icons/fa";
 import { GiMailbox } from "react-icons/gi";
+import { FiDownload } from "react-icons/fi";
+import { GrDocumentText } from "react-icons/gr";
 
 export default function Contact() {
   return (
@@ -7,20 +9,35 @@ export default function Contact() {
       id="contact"
       className="mb-3 flex flex-col content-center justify-center"
     >
-      <h2 className=" mb-2 flex-wrap  text-center text-2xl font-bold border-t border-slate-700 border-opacity-50
-      p-2">
+      <h2
+        className=" mb-2 flex-wrap  border-t border-slate-700 border-opacity-50 p-2 text-center text-2xl
+      font-bold"
+      >
         Contact Information
       </h2>
 
       <div className="mb-2 flex justify-center">
+        <div></div>
         <span className="mr-2 flex font-medium">
           <GiMailbox size={20} />:
         </span>
         <a
           href="mailto: beardedmongo@gmail.com"
-          className="text-blue-300 underline"
+          className="text-blue-400 underline"
         >
           beardedmongo@gmail.com
+        </a>
+      </div>
+      <div className="mb-2 flex justify-center">
+        <span className="mr-2 flex font-medium">
+          <FaRegFilePdf size={20} color={"white"} /> :
+        </span>
+        <a
+          href="/documents/Andrew_Morrow_Resume_2022.pdf"
+          download
+          className="mr-1 flex gap-1 text-center text-blue-400 underline"
+        >
+          Download My Resume <FiDownload size={20} />
         </a>
       </div>
       <h3
