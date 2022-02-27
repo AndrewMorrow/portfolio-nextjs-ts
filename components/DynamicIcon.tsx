@@ -21,7 +21,7 @@ export default function DynamicIcon(props: any) {
     case "SiJavascript":
       return <SiJavascript size={size} className="text-yellow-400" />;
     case "SiHandlebarsdotjs":
-      return <SiHandlebarsdotjs size={size} />;
+      return <SiHandlebarsdotjs size={size} className="text-orange-700" />;
     case "SiExpress":
       return <SiExpress size={size} />;
     case "SiTailwindCSS":
@@ -35,7 +35,7 @@ export default function DynamicIcon(props: any) {
     case "FaReact":
       return <FaReact size={size} className="text-sky-400" />;
     case "SiMysql":
-      return <SiMysql size={size} className="text-sky-800" />;
+      return <SiMysql size={size} className="text-sky-500" />;
     case "SiMongodb":
       return <SiMongodb size={size} color="green" />;
     case "SiTypescript":

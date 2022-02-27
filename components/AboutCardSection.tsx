@@ -6,7 +6,7 @@ import AboutCardItem from "./AboutCardItem";
 export default function AboutCardSection() {
   return (
     <>
-      <section className="lg-gap-6 flex flex-wrap justify-evenly gap-y-28 gap-x-6 ">
+      <section className="lg-gap-6 flex flex-wrap justify-evenly gap-y-28 gap-x-6 py-14">
         <AboutCardItem />
         {/* <div className="relative h-max w-72 rounded-lg bg-slate-800 p-6">
           <span className="absolute left-1/2 flex h-24 w-24 -translate-y-full -translate-x-1/2 items-center  justify-center rounded-full border-8 border-slate-900 bg-slate-900">

@@ -15,8 +15,12 @@ export default function Projects(props: any): JSX.Element {
   // }
 
   return (
-    <section id="projects" className="py-20 md:py-24">
-      <h2 className="font-bold text-2xl mb-4 text-center">Check out my work</h2>
+    <section id="projects" className="py-20 md:py-16">
+      <h2 className="mb-2 text-center font-playfair text-2xl font-bold">
+        View My Work
+      </h2>
+      <hr className="mb-4 w-2/4 translate-x-2/4 opacity-25" />
+
       <div className=" gap-4">
         {projectData.map((project, i: number) => (
           <ProjectItem key={i} flipped={i % 2} project={project} />

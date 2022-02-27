@@ -10,11 +10,12 @@ export default function Contact() {
       className="mb-3 flex flex-col content-center justify-center"
     >
       <h2
-        className=" mb-2 flex-wrap  border-t border-slate-700 border-opacity-50 p-2 text-center text-2xl
-      font-bold"
+        className=" flex-wrap p-2 text-center text-2xl
+      font-bold font-playfair"
       >
         Contact Information
       </h2>
+      <hr className="mb-4 w-1/2 translate-x-1/2 opacity-25" />
 
       <div className="mb-2 flex justify-center">
         <div></div>
@@ -43,7 +44,7 @@ export default function Contact() {
       <h3
         className="mb-2 
       p-2 
-      text-center font-medium "
+      text-center font-medium font-playfair"
       >
         Social
       </h3>

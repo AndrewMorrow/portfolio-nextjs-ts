@@ -13,7 +13,7 @@
 
   .tooltip {
     @apply invisible absolute;
-    background-color: gray;
+    background-color: #334155;
   }
 
   .has-tooltip:hover .tooltip {

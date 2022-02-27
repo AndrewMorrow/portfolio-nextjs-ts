@@ -21,7 +21,7 @@ const classNames = (...classes: any[]) => {
 
 export default function ProjectItem(props: any): JSX.Element {
   const {
-    project: { name, icons, githubRepo, deployedLink, imgSrc, altText },
+    project: { name, desc, icons, githubRepo, deployedLink, imgSrc, altText },
     flipped,
   } = props;
   const [iconInfoIsActive, setIconInfoIsActive] = useState(false);
@@ -33,9 +33,9 @@ export default function ProjectItem(props: any): JSX.Element {
   };
 
   return (
-    <section
+    <div
       className={classNames(
-        "mb-12 gap-4 rounded-lg py-12  sm:flex sm:py-16 lg:gap-0"
+        "mb-16 gap-4 rounded-lg py-8 sm:flex sm:py-10 lg:gap-0"
         // flipped
         //   ? "bg-gray-800 p-2 bg-opacity-60 backdrop-blur-xl rounded-lg"
         //   : "bg-gray-700 p-2 bg-opacity-40 backdrop-blur-xl  rounded-lg"
@@ -61,7 +61,7 @@ export default function ProjectItem(props: any): JSX.Element {
               >
                 {" "}
                 <span className="tooltip left-1/2 -bottom-1 -translate-x-2/4 translate-y-[125%]  rounded-md p-1">
-                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
+                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-slate-800 border-t-transparent border-r-transparent"></div>
                   {icon.tip}
                 </span>
                 <DynamicIcon icon={icon.name} size={icon.size} />
@@ -77,13 +77,15 @@ export default function ProjectItem(props: any): JSX.Element {
         )}
       >
         <div className="">
-          <h2 className="mb-3 text-center text-3xl text-white font-playfair">{name}</h2>
+          <h2 className="mb-3 text-center font-playfair text-3xl text-white">
+            {name}
+          </h2>
           <div className="mb-3 flex justify-center ">
             <a
               href={githubRepo}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip  relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-600 p-2"
+              className="has-tooltip relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-600 p-2 transition-all  hover:animate-pulse hover:border-blue-300"
             >
               <p className="self-center ">Github Repo</p>
               <i className="hidden self-center md:block">
@@ -94,7 +96,7 @@ export default function ProjectItem(props: any): JSX.Element {
               href={deployedLink}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip relative flex cursor-pointer content-center  gap-2 rounded-lg border-2 border-blue-600 p-2"
+              className="has-tooltip relative flex cursor-pointer content-center  gap-2 rounded-lg border-2 border-blue-600 p-2 transition-all  hover:animate-pulse hover:border-blue-300"
             >
               <p className="self-center">See Live Demo</p>
               <i className="hidden self-center md:block">
@@ -104,12 +106,7 @@ export default function ProjectItem(props: any): JSX.Element {
           </div>
         </div>
 
-        <p className="px-8 py-2 text-center text-white lg:mb-4 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae
-          provident deserunt magnam eligendi eos reprehenderit ipsam
-          voluptatibus et quisquam inventore porro tempore, cumque magni, in
-          velit quam maxime odit.
-        </p>
+        <p className="px-8 py-2 text-center text-white lg:mb-4 ">{desc}</p>
 
         <div className="block sm:hidden lg:block">
           <p
@@ -121,7 +118,7 @@ export default function ProjectItem(props: any): JSX.Element {
             Click to learn more!
           </p>
 
-          <ul className="flex w-full justify-center  gap-4">
+          <ul className="flex w-full flex-wrap justify-center gap-4">
             {icons.map((icon: any, i: number) => (
               <li
                 key={i}
@@ -134,7 +131,7 @@ export default function ProjectItem(props: any): JSX.Element {
                   <DynamicIcon icon={icon.name} size={icon.size} />
                 </a>
                 <span className="tooltip left-1/2 -bottom-1 -translate-x-2/4 translate-y-[125%]  rounded-md p-1">
-                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-gray-400 border-t-transparent border-r-transparent"></div>
+                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-slate-700 border-t-transparent border-r-transparent"></div>
                   {icon.tip}
                 </span>
               </li>
@@ -142,6 +139,6 @@ export default function ProjectItem(props: any): JSX.Element {
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
