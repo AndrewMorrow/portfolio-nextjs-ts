@@ -1,7 +1,7 @@
 import { IoAccessibility } from "react-icons/io5";
 import { RiShieldStarFill } from "react-icons/ri";
 import { GiBookCover } from "react-icons/gi";
-import AboutCardItem from "./CardItem";
+import AboutCardItem from "./AboutCardItem";
 
 export default function AboutCardSection() {
   return (

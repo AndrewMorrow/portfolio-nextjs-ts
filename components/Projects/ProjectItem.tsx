@@ -44,11 +44,15 @@ export default function ProjectItem(props: any): JSX.Element {
       <div
         className={classNames(
           flipped ? "order-2" : "order-1",
-          "mb-3 pt-2 text-center sm:w-1/2 sm:px-3"
+          "mb-3  pt-2 text-center  sm:w-1/2 sm:px-3"
         )}
       >
-        <Image src={imgSrc} alt={altText} width={500} height={300} />
-        <div className="mt-6 hidden sm:block lg:hidden">
+        <div className="sm:transform sm:hover:scale-110">
+          <a href={deployedLink} target="_blank" rel="noreferrer">
+            <Image src={imgSrc} alt={altText} width={500} height={300} />
+          </a>
+        </div>
+        <div className="mt-6 hidden sm:block lg:hidden ">
           <figure className="flex justify-center gap-4">
             {icons.map((icon: any, i: number) => (
               <a
@@ -73,7 +77,7 @@ export default function ProjectItem(props: any): JSX.Element {
         )}
       >
         <div className="">
-          <h2 className="mb-3 text-3xl text-white text-center ">{name}</h2>
+          <h2 className="mb-3 text-center text-3xl text-white font-playfair">{name}</h2>
           <div className="mb-3 flex justify-center ">
             <a
               href={githubRepo}
@@ -90,7 +94,7 @@ export default function ProjectItem(props: any): JSX.Element {
               href={deployedLink}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip relative flex cursor-pointer content-center  gap-2 rounded-lg bg-blue-600 p-2"
+              className="has-tooltip relative flex cursor-pointer content-center  gap-2 rounded-lg border-2 border-blue-600 p-2"
             >
               <p className="self-center">See Live Demo</p>
               <i className="hidden self-center md:block">
@@ -100,7 +104,7 @@ export default function ProjectItem(props: any): JSX.Element {
           </div>
         </div>
 
-        <p className="px-8 py-2 text-white lg:mb-4 text-center ">
+        <p className="px-8 py-2 text-center text-white lg:mb-4 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae
           provident deserunt magnam eligendi eos reprehenderit ipsam
           voluptatibus et quisquam inventore porro tempore, cumque magni, in

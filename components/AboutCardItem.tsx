@@ -38,7 +38,7 @@ export default function AboutCardItem() {
             {" "}
             {card.title}
           </h2>
-          <p className=" text-center font-light p-2">{card.desc}</p>
+          <p className=" p-2 text-center font-extralight">{card.desc}</p>
         </div>
       ))}
     </>

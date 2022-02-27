@@ -3,14 +3,14 @@ import Image from "next/image";
 /* This example requires Tailwind CSS v2.0+ */
 export default function Header() {
   return (
-    <header className="max-w-7xl mx-auto py-20 sm:py-24 ">
-      <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl mb-">
+    <header className="mx-auto max-w-7xl py-20 sm:py-20 ">
+      <h1 className="font-playfair text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
         Andrew Morrow
       </h1>
-      <h2 className="text-md md:text-lg lg:text-xl font-extrabold tracking-tight ">
+      <h2 className="text-md font-extrabold tracking-tight md:text-lg lg:text-xl ">
         Full Stack Web Developer
       </h2>
-      <p className="mt-6 text-xl max-w-3xl font-poppins">
+      <p className="mt-6 max-w-3xl text-lg  font-light">
         Dedicated developer with a passion for teaching looking to enhance a
         coding career with a first-class dev team in a challenging programming
         position. Excels at and enjoys learning new technologies and paradigms
