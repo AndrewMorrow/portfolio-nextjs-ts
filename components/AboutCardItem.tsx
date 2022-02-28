@@ -15,7 +15,7 @@ const cards = [
   },
   {
     id: 3,
-    title: "Public Trust Security Clearance",
+    title: "Mentorship and Lifelong Learning",
     icon: "GiBookCover",
     desc: " I currently mentor students through Trilogy Education from prestigious colleges around the world. These students continuously present new technologies and challenges that keep me learning and adapting.",
   },
