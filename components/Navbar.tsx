@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   useScrollPosition(({ prevPos, currPos }) => {
-    console.log("y", currPos.y);
+    // console.log("y", currPos.y);
     if (-currPos.y >= 0 && -currPos.y <= 900) {
       handleActiveChange("aboutMe", true);
     } else if (-currPos.y >= 900 && -currPos.y <= 1950) {
