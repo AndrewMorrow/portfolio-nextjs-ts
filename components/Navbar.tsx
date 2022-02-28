@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   useScrollPosition(({ prevPos, currPos }) => {
-    console.log("y", currPos.y);
+    // console.log("y", currPos.y);
     if (-currPos.y >= 0 && -currPos.y <= 850) {
       handleActiveChange("aboutMe", true);
     } else if (-currPos.y >= 850 && -currPos.y <= 1150) {
@@ -50,7 +50,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-50 bg-slate-800 bg-opacity-60 backdrop-blur-2xl "
+      className="sticky top-0 z-50 bg-slate-800 backdrop-blur-2xl "
     >
       {({ open }) => (
         <>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import DynamicIcon from "../DynamicIcon";
+import ProjectIcon from "./ProjectIcon";
 
 // interface Props {
 //   project: {
@@ -26,12 +27,6 @@ export default function ProjectItem(props: any): JSX.Element {
   } = props;
   const [iconInfoIsActive, setIconInfoIsActive] = useState(false);
 
-  const handleIconInfo = (
-    isActive: boolean | ((prevState: boolean) => boolean)
-  ) => {
-    setIconInfoIsActive(isActive);
-  };
-
   return (
     <div
       className={classNames(
@@ -52,23 +47,13 @@ export default function ProjectItem(props: any): JSX.Element {
             <Image src={imgSrc} alt={altText} width={500} height={300} />
           </a>
         </div>
-        <div className="mt-6 hidden sm:block lg:hidden ">
-          <figure className="flex justify-center gap-4">
+        <ul className="mt-6 hidden px-3 sm:block lg:hidden">
+          <figure className="flex flex-wrap justify-center gap-4">
             {icons.map((icon: any, i: number) => (
-              <a
-                key={i}
-                className="has-tooltip relative cursor-pointer self-center "
-              >
-                {" "}
-                <span className="tooltip left-1/2 -bottom-1 -translate-x-2/4 translate-y-[125%]  rounded-md p-1">
-                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-slate-800 border-t-transparent border-r-transparent"></div>
-                  {icon.tip}
-                </span>
-                <DynamicIcon icon={icon.name} size={icon.size} />
-              </a>
+              <ProjectIcon key={i} icon={icon} />
             ))}
           </figure>
-        </div>
+        </ul>
       </div>
       <div
         className={classNames(
@@ -77,7 +62,7 @@ export default function ProjectItem(props: any): JSX.Element {
         )}
       >
         <div className="">
-          <h2 className="mb-3 text-center font-playfair text-3xl text-white">
+          <h2 className="mb-4 text-center font-playfair text-2xl text-white">
             {name}
           </h2>
           <div className="mb-3 flex justify-center ">
@@ -96,7 +81,7 @@ export default function ProjectItem(props: any): JSX.Element {
               href={deployedLink}
               target="_blank"
               rel="noreferrer"
-              className="has-tooltip relative flex cursor-pointer content-center  gap-2 rounded-lg border-2 border-blue-600 p-2 transition-all  hover:animate-pulse hover:border-blue-300"
+              className="has-tooltip relative flex cursor-pointer content-center gap-1 rounded-lg border-2 border-blue-600 p-2 transition-all hover:animate-pulse hover:border-blue-300"
             >
               <p className="self-center">See Live Demo</p>
               <i className="hidden self-center md:block">
@@ -118,23 +103,9 @@ export default function ProjectItem(props: any): JSX.Element {
             Click to learn more!
           </p>
 
-          <ul className="flex w-full flex-wrap justify-center gap-4">
+          <ul className="flex flex-wrap justify-center gap-4 px-3">
             {icons.map((icon: any, i: number) => (
-              <li
-                key={i}
-                className="has-tooltip relative"
-                onMouseEnter={() => handleIconInfo(true)}
-                onMouseLeave={() => handleIconInfo(false)}
-              >
-                <a href={icon.href} className=" cursor-pointer self-center ">
-                  {" "}
-                  <DynamicIcon icon={icon.name} size={icon.size} />
-                </a>
-                <span className="tooltip left-1/2 -bottom-1 -translate-x-2/4 translate-y-[125%]  rounded-md p-1">
-                  <div className="absolute left-1/2 h-0 w-0  -translate-x-2/4 -translate-y-1/2 rotate-[135deg] border-8 border-slate-700 border-t-transparent border-r-transparent"></div>
-                  {icon.tip}
-                </span>
-              </li>
+              <ProjectIcon key={i} icon={icon} />
             ))}
           </ul>
         </div>

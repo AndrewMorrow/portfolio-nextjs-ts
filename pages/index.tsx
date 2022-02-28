@@ -11,7 +11,7 @@ import Technologies from "../components/Technologies";
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-full min-w-full bg-slate-900">
       <Head>
         <title>Andrew Morrow | Web Developer</title>
         <meta name="description" content="Andrew Morrow Portfolio" />

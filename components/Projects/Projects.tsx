@@ -16,10 +16,11 @@ export default function Projects(props: any): JSX.Element {
 
   return (
     <section id="projects" className="py-20 md:py-16">
-      <h2 className="mb-2 text-center font-playfair text-2xl font-bold">
+      <h2 className="mb-2 text-center font-playfair text-2xl  font-bold md:text-3xl">
         View My Work
       </h2>
-      <hr className="mb-4 w-2/4 translate-x-2/4 opacity-25" />
+      {/* <hr className="mb-4 w-2/4 translate-x-2/4 opacity-25" /> */}
+      <hr className="mb-4 opacity-25 md:w-1/2 md:translate-x-1/2" />
 
       <div className=" gap-4">
         {projectData.map((project, i: number) => (

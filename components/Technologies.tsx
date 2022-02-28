@@ -14,15 +14,16 @@ const technologies = [
 
 export default function Technologies() {
   return (
-    <section className="mb-20 py-8 text-center">
-      <h3 className="mb-1 p-2 font-playfair text-2xl font-bold">
+    <section className="mb-16 py-10 text-center">
+      <h3 className="mb-1 p-2 font-playfair text-2xl md:text-3xl font-bold">
         Technology Proficiencies
       </h3>
-      <hr className="mb-4 w-1/2 translate-x-1/2 opacity-25" />
-      <ul className="flex flex-wrap justify-between gap-4 sm:justify-evenly sm:gap-2">
+      {/* <hr className="mb-6 w-1/2 translate-x-1/2 opacity-25" /> */}
+      <hr className="mb-6 opacity-25 md:w-1/2 md:translate-x-1/2" />
+      <ul className="flex flex-wrap justify-center gap-4 sm:justify-evenly sm:gap-2">
         {technologies.map((technology, i) => (
           <TechnologyItem
-            key={technology.id}
+            key={i}
             name={technology.name}
             icon={technology.icon}
             flipped={i % 2}
