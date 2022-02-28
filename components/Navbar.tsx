@@ -22,12 +22,12 @@ export default function Navbar() {
   };
 
   useScrollPosition(({ prevPos, currPos }) => {
-    // console.log("y", currPos.y);
-    if (-currPos.y >= 0 && -currPos.y <= 850) {
+    console.log("y", currPos.y);
+    if (-currPos.y >= 0 && -currPos.y <= 900) {
       handleActiveChange("aboutMe", true);
-    } else if (-currPos.y >= 850 && -currPos.y <= 1150) {
+    } else if (-currPos.y >= 900 && -currPos.y <= 1950) {
       handleActiveChange("projects", true);
-    } else if (-currPos.y >= 1150) {
+    } else if (-currPos.y >= 1950) {
       handleActiveChange("contact", true);
     }
   });

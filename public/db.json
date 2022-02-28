@@ -19,26 +19,26 @@
         "tip": "NodeJS",
         "name": "FaNodeJs",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://nodejs.org/en/"
       },
       {
         "icon": "<SiMysql size={40} />",
         "tip": "MySQL",
         "name": "SiMysql",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://www.mysql.com/"
       },
       {
         "tip": "ExpressJS",
         "name": "SiExpress",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://expressjs.com/"
       },
       {
         "tip": "Handlebars",
         "name": "SiHandlebarsdotjs",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://handlebarsjs.com/"
       }
     ]
   },
@@ -62,77 +62,21 @@
         "tip": "ExpressJS",
         "name": "SiExpress",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://expressjs.com/"
       },
       {
         "icon": "<SiHandlebarsdotjs size={40} />",
         "tip": "Handlebars",
         "name": "SiHandlebarsdotjs",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://handlebarsjs.com/"
       },
       {
         "icon": "<FaNodeJs size={40} />",
         "tip": "NodeJS",
         "name": "FaNodeJs",
         "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        "href": "https://nodejs.org/en/"
       }
     ]
   }

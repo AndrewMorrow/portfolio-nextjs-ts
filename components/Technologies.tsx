@@ -1,15 +1,40 @@
 import TechnologyItem from "./TechnologyItem";
 
 const technologies = [
-  { id: 1, name: "HTML", icon: "FaHtml5" },
-  { id: 2, name: "CSS", icon: "FaCss3Alt" },
-  { id: 2, name: "JavaScript", icon: "SiJavascript" },
-  { id: 2, name: "NodeJS", icon: "FaNodeJs" },
-  { id: 2, name: "ReactJS", icon: "FaReact" },
-  { id: 2, name: "MongoDB", icon: "SiMongodb" },
-  { id: 2, name: "GraphQL", icon: "SiGraphql" },
-  { id: 2, name: "TypeScript", icon: "SiTypescript" },
-  { id: 2, name: "MySQL", icon: "SiMysql" },
+  {
+    id: 1,
+    name: "HTML",
+    icon: "FaHtml5",
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    icon: "FaCss3Alt",
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    id: 2,
+    name: "JavaScript",
+    icon: "SiJavascript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  { id: 2, name: "NodeJS", icon: "FaNodeJs", href: "https://nodejs.org/en/" },
+  { id: 2, name: "ReactJS", icon: "FaReact", href: "https://reactjs.org/" },
+  {
+    id: 2,
+    name: "MongoDB",
+    icon: "SiMongodb",
+    href: "https://www.mongodb.com/",
+  },
+  { id: 2, name: "GraphQL", icon: "SiGraphql", href: "https://graphql.org/" },
+  {
+    id: 2,
+    name: "TypeScript",
+    icon: "SiTypescript",
+    href: "https://www.typescriptlang.org/",
+  },
+  { id: 2, name: "MySQL", icon: "SiMysql", href: "https://www.mysql.com/" },
 ];
 
 export default function Technologies() {
@@ -26,6 +51,7 @@ export default function Technologies() {
             key={i}
             name={technology.name}
             icon={technology.icon}
+            href={technology.href}
             flipped={i % 2}
           />
         ))}

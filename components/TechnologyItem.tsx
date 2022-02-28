@@ -16,30 +16,25 @@ export default function TechnologyItem(props: any) {
           className="mr-2 hidden text-blue-600 transition duration-300 ease-in-out sm:block"
         />
       )} */}
-      <span
-        className={classNames(
-          "rounded-lg bg-slate-700 bg-opacity-40 p-2 backdrop-blur-xl"
-        )}
+      <a
+        href={props.href}
+        target="_blank"
+        rel="noreferrer"
+        className="relative flex cursor-pointer"
+        onMouseOver={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}
       >
-        <a
-          href="www.google.com"
-          className="relative flex cursor-pointer"
-          onMouseOver={() => setIsShown(true)}
-          onMouseLeave={() => setIsShown(false)}
+        <span
+          className={classNames(
+            "rounded-lg bg-slate-700 bg-opacity-40 p-2 backdrop-blur-xl"
+          )}
         >
-          {/* <BsFillArrowRightCircleFill
-            size={30}
-            className={classNames(
-              " mr-2 text-blue-600 transition-all duration-300",
-              !isShown && "invisible"
-            )}
-          /> */}
           <span className="flex self-center font-semibold">
             <DynamicIcon size={30} icon={props.icon} />
             <p className="ml-2 self-center text-white">{props.name}</p>
           </span>{" "}
-        </a>
-      </span>
+        </span>
+      </a>
     </li>
   );
 }
