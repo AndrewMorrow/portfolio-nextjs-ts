@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header id="aboutMe" className="mx-auto max-w-7xl py-14 sm:py-16 ">
       <h1 className="text-center font-playfair text-3xl font-extrabold tracking-tight sm:text-left md:text-4xl lg:text-5xl ">
-        <span className="bg-gradient-to-r from-slate-100 to-blue-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-slate-100 to-blue-500 bg-clip-text text-transparent">
           Andrew Morrow
         </span>
       </h1>
