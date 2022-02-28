@@ -11,7 +11,7 @@ export default function Contact() {
     >
       <h2
         className=" flex-wrap p-2 text-center font-playfair text-2xl
-      font-bold md:text-3xl"
+      font-bold lg:text-3xl"
       >
         Contact Information
       </h2>

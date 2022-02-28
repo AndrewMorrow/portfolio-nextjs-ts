@@ -40,7 +40,7 @@ const technologies = [
 export default function Technologies() {
   return (
     <section className="mb-16 py-10 text-center">
-      <h3 className="mb-1 p-2 font-playfair text-2xl md:text-3xl font-bold">
+      <h3 className="mb-1 p-2 font-playfair text-2xl lg:text-3xl font-bold">
         Technology Proficiencies
       </h3>
       {/* <hr className="mb-6 w-1/2 translate-x-1/2 opacity-25" /> */}

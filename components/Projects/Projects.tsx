@@ -16,7 +16,7 @@ export default function Projects(props: any): JSX.Element {
 
   return (
     <section id="projects" className="py-20 md:py-16">
-      <h2 className="mb-2 text-center font-playfair text-2xl  font-bold md:text-3xl">
+      <h2 className="mb-2 text-center font-playfair text-2xl font-bold lg:text-3xl">
         View My Work
       </h2>
       {/* <hr className="mb-4 w-2/4 translate-x-2/4 opacity-25" /> */}
