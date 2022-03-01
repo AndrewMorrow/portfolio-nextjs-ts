@@ -13,7 +13,7 @@ export default function Header() {
         Full Stack Web Developer
       </h2>
       <p className="mt-6 max-w-3xl text-center  text-lg font-light sm:text-left">
-        Dedicated developer with a passion for teaching looking to enhance a
+        Dedicated developer with a passion for teaching. Looking to enhance a
         coding career with a first-class dev team in a challenging programming
         position. Excels at and enjoys learning new technologies and paradigms
         as well as teaching them to others.
