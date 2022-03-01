@@ -5,7 +5,21 @@ const cards = [
     id: 1,
     title: "Section 508 Trusted Tester Conformance",
     icon: "IoAccessibility",
-    desc: "I am a 508 accessibility certified through the trusted tester training offered by the Department of Homeland Security. Which deals with the latest accessibility standards and design.",
+    desc: (
+      <p>
+        I am a 508 accessibility certified through the{" "}
+        <a
+          href="https://www.dhs.gov/trusted-tester"
+          target="_blank"
+          rel="noreferrer"
+          className="underline text-blue-400 visited:text-purple-400"
+        >
+          trusted tester training
+        </a>{" "}
+        offered by the Department of Homeland Security. Which deals with the
+        latest accessibility standards and design.
+      </p>
+    ),
   },
   {
     id: 2,
@@ -22,6 +36,15 @@ const cards = [
 ];
 
 export default function AboutCardItem() {
+  const handleAnchorInput = (string: string) => {
+    const newString = string.replace(
+      "trusted tester training",
+      `${(<a>trusted tester training</a>)}`
+    );
+
+    console.log(newString);
+    return newString;
+  };
   return (
     <>
       {cards.map((card) => (

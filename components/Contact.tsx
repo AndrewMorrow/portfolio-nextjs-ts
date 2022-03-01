@@ -24,7 +24,7 @@ export default function Contact() {
         </span>
         <a
           href="mailto: beardedmongo@gmail.com"
-          className="text-blue-400 underline"
+          className="text-blue-400 underline visited:text-purple-400"
         >
           beardedmongo@gmail.com
         </a>
@@ -36,7 +36,7 @@ export default function Contact() {
         <a
           href="/documents/Andrew_Morrow_Resume_2022.pdf"
           download
-          className="mr-1 flex gap-1 text-center text-blue-400 underline"
+          className="mr-1 flex gap-1 text-center text-blue-400 underline visited:text-purple-400"
         >
           Download My Resume <FiDownload size={20} />
         </a>
