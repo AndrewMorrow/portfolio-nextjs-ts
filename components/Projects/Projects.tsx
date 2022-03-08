@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { forwardRef, useEffect } from "react";
 import ProjectItem from "./ProjectItem";
 import projectData from "../../public/db.json";
 
-export default function Projects(props: any): JSX.Element {
+export default forwardRef<HTMLElement>(function Projects(
+  props: any,
+  ref
+): JSX.Element {
   // console.log(props);
   // interface Project {
   //   name: string;
@@ -15,7 +18,7 @@ export default function Projects(props: any): JSX.Element {
   // }
 
   return (
-    <section id="projects" className="py-20 md:py-16">
+    <section ref={ref} id="projects" className="py-20 md:py-16">
       <h2 className="mb-2 text-center font-playfair text-2xl font-bold lg:text-3xl">
         View My Work
       </h2>
@@ -29,7 +32,7 @@ export default function Projects(props: any): JSX.Element {
       </div>
     </section>
   );
-}
+});
 
 // export async function getStaticProps(context: any) {
 

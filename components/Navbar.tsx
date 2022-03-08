@@ -9,28 +9,32 @@ function classNames(...classes: (string | boolean)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
-  const initialState = {
-    aboutMe: false,
-    projects: false,
-    contact: false,
-  };
-  const [activeItem, setActiveItem] = useState(initialState);
+export default function Navbar(props: {
+  activeItem: any;
+  handleActiveChange: any;
+}) {
+  const { activeItem, handleActiveChange } = props;
 
-  const handleActiveChange = (item: string, isActive: boolean) => {
-    setActiveItem({ ...initialState, [item]: isActive });
-  };
+  // const initialState = {
+  //   aboutMe: false,
+  //   projects: false,
+  //   contact: false,
+  // };
+  // const [activeItem, setCurrActiveItem] = useState(activeItem);
+  // const handleActiveChange = (item: string, isActive: boolean) => {
+  //   setcurrActiveItem({ ...initialState, [item]: isActive });
+  // };
 
-  useScrollPosition(({ prevPos, currPos }) => {
-    // console.log("y", currPos.y);
-    if (-currPos.y >= 0 && -currPos.y <= 900) {
-      handleActiveChange("aboutMe", true);
-    } else if (-currPos.y >= 900 && -currPos.y <= 1950) {
-      handleActiveChange("projects", true);
-    } else if (-currPos.y >= 1950) {
-      handleActiveChange("contact", true);
-    }
-  });
+  // useScrollPosition(({ prevPos, currPos }) => {
+  //   // console.log("y", currPos.y);
+  //   if (-currPos.y >= 0 && -currPos.y <= 900) {
+  //     handleActiveChange("aboutMe", true);
+  //   } else if (-currPos.y >= 900 && -currPos.y <= 1950) {
+  //     handleActiveChange("projects", true);
+  //   } else if (-currPos.y >= 1950) {
+  //     handleActiveChange("contact", true);
+  //   }
+  // });
 
   // const [scrollPosition, setScrollPosition] = useState(0);
   // const handleScroll = () => {
