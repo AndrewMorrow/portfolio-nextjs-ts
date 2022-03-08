@@ -7,6 +7,8 @@ import {
   SiMysql,
   SiTailwindcss,
   SiTypescript,
+  SiRedux,
+  SiPaypal,
 } from "react-icons/si";
 import React from "react";
 import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
@@ -24,8 +26,8 @@ export default function DynamicIcon(props: any) {
       return <SiHandlebarsdotjs size={size} className="text-orange-700" />;
     case "SiExpress":
       return <SiExpress size={size} />;
-    case "SiTailwindCSS":
-      return <SiTailwindcss size={size} />;
+    case "SiTailwindcss":
+      return <SiTailwindcss size={size} className="text-sky-400" />;
     case "FaHtml5":
       return <FaHtml5 size={size} className="text-blue-700" />;
     case "FaCss3Alt":
@@ -48,6 +50,10 @@ export default function DynamicIcon(props: any) {
       return <RiShieldStarFill size={size} />;
     case "GiBookCover":
       return <GiBookCover size={size} />;
+    case "SiRedux":
+      return <SiRedux size={size} className="text-purple-400" />;
+    case "SiPaypal":
+      return <SiPaypal size={size} className="text-blue-600" />;
     default:
       return <span>no icon</span>;
   }

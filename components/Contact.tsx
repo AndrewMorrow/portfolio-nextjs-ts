@@ -75,7 +75,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <FaTwitter size={30} className="text-sky-400" />
+              <FaTwitter size={30} className="text-blue-400" />
             </a>
           </li>
         </ul>

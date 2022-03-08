@@ -1,5 +1,64 @@
 [
   {
+    "name": "Cedar House Candles",
+    "githubRepo": "https://github.com/AndrewMorrow/cedar-house-candles-cra5",
+    "deployedLink": "https://cedar-house-production-test.herokuapp.com/",
+    "imgSrc": "/images/cedar_house_candles_collage.png",
+    "altText": "Screenshot of Cedar House Candles website with tablet, phone, and desktop views",
+    "desc": "This is an ecommerce website I am building for the owner of Cedar House Candles. The project started because there are many drawbacks to her current platform and features that she would like to implement. This has given me hands on experience with handling a clients needs and concerns. The website is a work in progress and is not finished but should be fully functional.",
+    "icons": [
+      {
+        "icon": "<FaReact size={40} />",
+        "tip": "React",
+        "name": "FaReact",
+        "size": 40,
+        "href": "https://reactjs.org/"
+      },
+      {
+        "icon": "<SiRedux size={40} />",
+        "tip": "Redux",
+        "name": "SiRedux",
+        "size": 40,
+        "href": "https://redux.js.org/"
+      },
+      {
+        "icon": "<SiExpress size={40} />",
+        "tip": "ExpressJS",
+        "name": "SiExpress",
+        "size": 40,
+        "href": "https://expressjs.com/"
+      },
+      {
+        "icon": "<FaNodeJs size={40} />",
+        "tip": "NodeJS",
+        "name": "FaNodeJs",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      },
+      {
+        "icon": "<SiTailwindcss size={40} />",
+        "tip": "TailwindCSS",
+        "name": "SiTailwindcss",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      },
+      {
+        "icon": "<SiMongodb size={40} />",
+        "tip": "MongoDB",
+        "name": "SiMongodb",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      },
+      {
+        "icon": "<SiPaypal size={40} />",
+        "tip": "Paypal",
+        "name": "SiPaypal",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      }
+    ]
+  },
+  {
     "id": 1,
     "name": "Merriment Quest",
     "githubRepo": "https://github.com/AndrewMorrow/Merriment-Quest",
@@ -39,44 +98,6 @@
         "name": "SiHandlebarsdotjs",
         "size": 40,
         "href": "https://handlebarsjs.com/"
-      }
-    ]
-  },
-  {
-    "name": "Testing Project",
-    "githubRepo": "https://github.com/AndrewMorrow/Merriment-Quest",
-    "deployedLink": "https://merrimentquest.herokuapp.com/",
-    "imgSrc": "/images/merrimentquestCollage.png",
-    "altText": "Screenshot of Merriment Quest website with tablet, phone, and desktop views",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, quae provident deserunt magnam eligendi e reprehenderit ipsam voluptatibus et quisquam inventore porro tempore, cumqu magni, in velit quam maxime odit.",
-    "icons": [
-      {
-        "icon": "<SiJavascript size={40} />",
-        "tip": "Javascript",
-        "name": "SiJavascript",
-        "size": 40,
-        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-      },
-      {
-        "icon": "<SiExpress size={40} />",
-        "tip": "ExpressJS",
-        "name": "SiExpress",
-        "size": 40,
-        "href": "https://expressjs.com/"
-      },
-      {
-        "icon": "<SiHandlebarsdotjs size={40} />",
-        "tip": "Handlebars",
-        "name": "SiHandlebarsdotjs",
-        "size": 40,
-        "href": "https://handlebarsjs.com/"
-      },
-      {
-        "icon": "<FaNodeJs size={40} />",
-        "tip": "NodeJS",
-        "name": "FaNodeJs",
-        "size": 40,
-        "href": "https://nodejs.org/en/"
       }
     ]
   }
