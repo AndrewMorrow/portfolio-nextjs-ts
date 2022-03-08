@@ -5,7 +5,7 @@
     "deployedLink": "https://cedar-house-production-test.herokuapp.com/",
     "imgSrc": "/images/cedar_house_candles_collage.png",
     "altText": "Screenshot of Cedar House Candles website with tablet, phone, and desktop views",
-    "desc": "This is an ecommerce website I am building for the owner of Cedar House Candles. The project started because there are many drawbacks to her current platform and features that she would like to implement. This has given me hands on experience with handling a clients needs and concerns. The website is a work in progress and is not finished but should be fully functional.",
+    "desc": "This is an ecommerce website I am building for the owner of Cedar House Candles. The project started because there are many drawbacks to her current platform and features that she would like to implement. This has given me hands on experience with handling a clients needs and concerns. The website is a work in progress and is not finished but should be fully functional. The repository is private as of right now.",
     "icons": [
       {
         "icon": "<FaReact size={40} />",
