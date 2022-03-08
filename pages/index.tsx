@@ -30,17 +30,18 @@ const Home: NextPage = () => {
   useScrollPosition(({ prevPos, currPos }) => {
     // console.log("y", currPos.y);
     if (projectsRef.current && contactRef.current) {
-      if (
-        -currPos.y >= 0 &&
-        -currPos.y <= projectsRef?.current?.offsetTop - 100
-      ) {
+      if (-currPos.y >= 0 && -currPos.y <= projectsRef?.current?.offsetTop) {
         handleActiveChange("aboutMe", true);
       } else if (
-        -currPos.y >= projectsRef?.current?.offsetTop - 100 &&
-        -currPos.y <= projectsRef.current.offsetHeight + 600
+        -currPos.y >= projectsRef?.current?.offsetTop &&
+        -currPos.y <=
+          projectsRef?.current?.offsetTop + projectsRef.current.offsetHeight
       ) {
         handleActiveChange("projects", true);
-      } else if (-currPos.y >= contactRef.current.offsetTop - 900) {
+      } else if (
+        -currPos.y >=
+        projectsRef?.current?.offsetTop + projectsRef.current.offsetHeight
+      ) {
         handleActiveChange("contact", true);
       }
     }
