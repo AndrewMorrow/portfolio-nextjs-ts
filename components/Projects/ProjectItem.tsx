@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaGithub, FaRocket } from "react-icons/fa";
+import { MdDoNotDisturbAlt, MdOutlineNotInterested } from "react-icons/md";
 import DynamicIcon from "../DynamicIcon";
 import ProjectIcon from "./ProjectIcon";
 
@@ -66,17 +67,29 @@ export default function ProjectItem(props: any): JSX.Element {
             {name}
           </h2>
           <div className="mb-3 flex justify-center ">
-            <a
-              href={githubRepo}
-              target="_blank"
-              rel="noreferrer"
-              className="has-tooltip relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-600 p-2 transition-all  hover:animate-pulse hover:border-blue-300"
-            >
-              <p className="self-center ">Github Repo</p>
-              <i className="hidden self-center md:block">
-                <FaGithub size={30} color="white" />
-              </i>
-            </a>
+            {githubRepo ? (
+              <a
+                href={githubRepo}
+                target="_blank"
+                rel="noreferrer"
+                className="has-tooltip relative mr-5 flex content-center gap-2 rounded-lg border-2 border-blue-600 p-2 transition-all  hover:animate-pulse hover:border-blue-300"
+              >
+                <p className="self-center ">Github Repo</p>
+                <i className="hidden self-center md:block">
+                  <FaGithub size={30} color="white" />
+                </i>
+              </a>
+            ) : (
+              <button
+                disabled
+                className="has-tooltip relative mr-5 flex content-center gap-2 rounded-lg border-2 border-gray-600 p-2  hover:cursor-not-allowed"
+              >
+                <p className="self-center text-gray-400">Private Repo</p>
+                <i className="hidden self-center md:block">
+                  <MdOutlineNotInterested size={30} color="gray" />
+                </i>
+              </button>
+            )}
             <a
               href={deployedLink}
               target="_blank"

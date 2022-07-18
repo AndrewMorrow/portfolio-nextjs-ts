@@ -1,11 +1,62 @@
 [
   {
+    "name": "SimWin Sports",
+    "githubRepo": false,
+    "deployedLink": "https://simwinsports.com/",
+    "imgSrc": "/images/simwinSportsCollage.png",
+    "altText": "Screenshot of Simwin Sports website with tablet, phone, and desktop views",
+    "desc": "This is a marketing website for Simwin Sports which is a fantasy sports company. I built this website from the ground up using NextJS, TailwindCSS, and Mailchimp mailing services via serverless functions.",
+    "icons": [
+      {
+        "icon": "<FaReact size={40} />",
+        "tip": "React",
+        "name": "FaReact",
+        "size": 40,
+        "href": "https://reactjs.org/"
+      },
+      {
+        "icon": "<TbBrandNextjs size={40} />",
+        "tip": "NextJS",
+        "name": "TbBrandNextjs",
+        "size": 40,
+        "href": "https://nextjs.org/"
+      },
+      {
+        "icon": "<FaNodeJs size={40} />",
+        "tip": "NodeJS",
+        "name": "FaNodeJs",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      },
+      {
+        "icon": "<CgServerless size={40} />",
+        "tip": "Serverless",
+        "name": "CgServerless",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      },
+      {
+        "icon": "<SiTailwindcss size={40} />",
+        "tip": "TailwindCSS",
+        "name": "SiTailwindcss",
+        "size": 40,
+        "href": "https://nodejs.org/en/"
+      },
+      {
+        "tip": "Javascript",
+        "name": "SiJavascript",
+        "size": 40,
+        "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ]
+  },
+  {
     "name": "Cedar House Candles",
     "githubRepo": "https://github.com/AndrewMorrow/cedar-house-candles-cra5",
     "deployedLink": "https://cedar-house-production-test.herokuapp.com/",
     "imgSrc": "/images/cedar_house_candles_collage.png",
     "altText": "Screenshot of Cedar House Candles website with tablet, phone, and desktop views",
-    "desc": "This is an ecommerce website I am building for the owner of Cedar House Candles. The project started because there are many drawbacks to her current platform and features that she would like to implement. This has given me hands on experience with handling a clients needs and concerns. The website is a work in progress and is not finished but should be fully functional. The repository is private as of right now.",
+    "desc": "This is an ecommerce website I am building for the owner of Cedar House Candles. The project started because there are many drawbacks to her current platform and features that she would like to implement. This has given me hands on experience with handling a clients needs and concerns. The website utlizes ReactJS, an authentication system, and a NodeJS REST API server utilizing a SQL database.",
     "icons": [
       {
         "icon": "<FaReact size={40} />",
@@ -58,8 +109,8 @@
       }
     ]
   },
+
   {
-    "id": 1,
     "name": "Merriment Quest",
     "githubRepo": "https://github.com/AndrewMorrow/Merriment-Quest",
     "deployedLink": "https://merrimentquest.herokuapp.com/",

@@ -15,6 +15,8 @@ import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
 import { IoAccessibility } from "react-icons/io5";
 import { RiShieldStarFill } from "react-icons/ri";
 import { GiBookCover } from "react-icons/gi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { CgServerless } from "react-icons/cg";
 
 export default function DynamicIcon(props: any) {
   const { icon, size } = props;
@@ -54,6 +56,10 @@ export default function DynamicIcon(props: any) {
       return <SiRedux size={size} className="text-purple-400" />;
     case "SiPaypal":
       return <SiPaypal size={size} className="text-blue-600" />;
+    case "TbBrandNextjs":
+      return <TbBrandNextjs size={size} className="text-white" />;
+    case "CgServerless":
+      return <CgServerless size={size} className="text-rose-500" />;
     default:
       return <span>no icon</span>;
   }

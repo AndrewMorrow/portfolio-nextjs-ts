@@ -12,7 +12,7 @@ const cards = [
           href="https://www.dhs.gov/trusted-tester"
           target="_blank"
           rel="noreferrer"
-          className="underline text-blue-400 visited:text-purple-400"
+          className="text-blue-400 underline visited:text-purple-400"
         >
           trusted tester training
         </a>{" "}
@@ -25,7 +25,7 @@ const cards = [
     id: 2,
     title: "Public Trust Security Clearance",
     icon: "RiShieldStarFill",
-    desc: "I have public trust security clearance through the Department of Homeland Security. This proves my trustworthiness and allows me to work on higher requirement government contracts.",
+    desc: "I have public trust security clearance through the Department of Homeland Security. This states that trust and security are of upmost importance to me and the company I am working for.",
   },
   {
     id: 3,
