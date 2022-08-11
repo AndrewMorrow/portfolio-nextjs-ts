@@ -52,7 +52,7 @@
   },
   {
     "name": "Cedar House Candles",
-    "githubRepo": "https://github.com/AndrewMorrow/cedar-house-candles-cra5",
+    "githubRepo": false,
     "deployedLink": "https://cedar-house-production-test.herokuapp.com/",
     "imgSrc": "/images/cedar_house_candles_collage.png",
     "altText": "Screenshot of Cedar House Candles website with tablet, phone, and desktop views",

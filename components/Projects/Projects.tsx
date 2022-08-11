@@ -20,7 +20,7 @@ export default forwardRef<HTMLElement>(function Projects(
   return (
     <section ref={ref} id="projects" className="py-20 md:py-16">
       <h2 className="mb-2 text-center font-playfair text-2xl font-bold lg:text-3xl">
-        View My Work
+        My Work
       </h2>
       {/* <hr className="mb-4 w-2/4 translate-x-2/4 opacity-25" /> */}
       <hr className="mb-4 opacity-25 md:w-1/2 md:translate-x-1/2" />

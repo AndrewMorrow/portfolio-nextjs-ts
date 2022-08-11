@@ -96,7 +96,7 @@ export default function ProjectItem(props: any): JSX.Element {
               rel="noreferrer"
               className="has-tooltip relative flex cursor-pointer content-center gap-1 rounded-lg border-2 border-blue-600 p-2 transition-all hover:animate-pulse hover:border-blue-300"
             >
-              <p className="self-center">See Live Demo</p>
+              <p className="self-center">See Live Site</p>
               <i className="hidden self-center md:block">
                 <FaRocket size={30} color="white" />
               </i>
